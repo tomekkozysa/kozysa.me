@@ -1,0 +1,21 @@
+{
+	"private": true,
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"devDependencies": {
+		"@nuxt/content": "^2.4.3",
+		"@nuxt/image": "^0.7.1",
+		"@nuxt/image-edge": "^1.0.0-27919678.2f5b64b",
+		"@nuxtjs/tailwindcss": "^6.3.1",
+		"nuxt": "^3.1.2"
+	},
+	"dependencies": {
+		"@tailwindcss/typography": "^0.5.9",
+		"vue-dragscroll": "^4.0.5"
+	}
+}
