@@ -1,6 +1,6 @@
 <template>
 	<nav
-		class="navigation bg-black fixed top-0 min-h-full text-white flex items-center pl-24 z-100"
+		class="navigation bg-black fixed top-0 min-h-full text-white flex items-center pl-24 z-30"
 		:class="expanded ? 'is_open' : 'is_closed'"
 	>
 		<ul class="w-full text-left text-3xl underline">

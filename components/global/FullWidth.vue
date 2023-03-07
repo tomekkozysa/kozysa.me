@@ -1,23 +1,15 @@
 <template>
-	<div class="flex flex-col">
-		<div class="flex gap-x-4" :class="[cap ? 'capped' : '', maxWidth]">
-			<figure
-				class="flex flex-col min-w-1/2 flex-1 items-center"
-				:class="[scroll ? `scroll` : '']"
-			>
-				<slot name="left" />
-			</figure>
-			<figure
-				class="flex flex-col min-w-1/2 flex-1 items-center"
-				:class="[scroll ? `scroll` : '']"
-			>
-				<slot name="right" />
-			</figure>
+	<figure
+		class="full-width flex flex-col"
+		:class="[cap ? 'capped' : '', maxWidth]"
+	>
+		<div :class="[scroll ? `scroll` : '']">
+			<slot name="image" />
 		</div>
 		<Caption :align="caption">
 			<slot name="caption" />
 		</Caption>
-	</div>
+	</figure>
 </template>
 <script setup>
 const props = defineProps(["cap", "scroll", "width", "caption"]);

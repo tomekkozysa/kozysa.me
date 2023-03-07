@@ -1,6 +1,5 @@
 <script setup>
 const route = useRoute();
-
 const { data } = await useAsyncData("work", () =>
 	queryContent("/work", route.params.slug).findOne()
 );
@@ -16,15 +15,24 @@ useHead({
 	//     : 'Site Title'
 	// }
 });
+
+const maxWidth = computedMaxWidth("default");
 </script>
 <template>
-	<main>
-		<section class="sticky top-10 bg-white pb-4">
-			<h1>{{ data.title }}</h1>
-			<p>{{ data.description }}</p>
+	<main class="flex flex-col items-center">
+		<section
+			class="sticky top-10 bg-stone-50 pb-4 w-full flex flex-col items-center pl-32 pr-10"
+		>
+			<div class="w-full" :class="maxWidth">
+				<h1>{{ data.title }}</h1>
+				<p>{{ data.description }}</p>
+			</div>
 		</section>
-		<div class="mt-8 content">
-			<ContentDoc :document="data" />
+		<div>
+			<ContentDoc
+				:document="data"
+				class="content flex flex-col items-center pl-32 pr-10"
+			/>
 		</div>
 	</main>
 </template>

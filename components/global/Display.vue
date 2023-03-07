@@ -8,10 +8,10 @@ const props = defineProps(["src", "alt"]);
 </script>
 <style scoped>
 .display {
-	border: 2px solid black;
-	border-radius: 15px;
+	/* border: 2px solid black; */
+	/* border-radius: 15px; */
 	/* max-height: 60vh; */
-	overflow: hidden;
+	/* overflow: hidden; */
 	/* overflow-y: auto; */
 	/* user-select: none; */
 	/* ms-overflow-style: none;  */

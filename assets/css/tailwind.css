@@ -2,11 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* a.router-link-active {
-	@apply font-bold bg-indigo-300 text-sm text-4xl;
-} */
-@layer components {
-	.content p {
-		@apply mt-32 mb-16;
+@layer base {
+	body {
+		@apply bg-stone-50;
 	}
 }

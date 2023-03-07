@@ -5,6 +5,7 @@ export default defineNuxtConfig({
 		"@nuxtjs/tailwindcss",
 		"@nuxt/content",
 		"@nuxt/image-edge",
+		"@vueuse/nuxt",
 		"@tailwindcss/typography",
 	],
 	// plugins: [
@@ -22,6 +23,11 @@ export default defineNuxtConfig({
 					content:
 						"Selection of design and development works by Tomasz",
 				},
+				{
+					name: "viewport",
+					content:
+						"user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=.2, width=device-width",
+				},
 			],
 		},
 	},
@@ -36,6 +42,9 @@ export default defineNuxtConfig({
 				document.thumbnail = await database.markdown.toJSON(
 					document.thumbnail
 				);
+			}
+			if (document.extension === ".md" && document.order) {
+				document.order = await database.markdown.toJSON(document.order);
 			}
 		},
 	},
@@ -72,8 +81,15 @@ export default defineNuxtConfig({
 				`/app.{js,ts,vue}`,
 				`/Error.{js,ts,vue}`,
 				`/error.{js,ts,vue}`,
-				"./content/**/*.md",
+				"content/**/*.md",
 			],
+			theme: {
+				extend: {
+					maxWidth: {
+						"8xl": "96rem",
+					},
+				},
+			},
 		},
 	},
 	// tailwindcss: {
