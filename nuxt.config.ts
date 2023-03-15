@@ -67,6 +67,10 @@ export default defineNuxtConfig({
 				},
 			},
 		},
+		provider: "netlify",
+		netlify: {
+			baseURl: process.env.IMAGES_URL,
+		},
 	},
 	tailwindcss: {
 		config: {
