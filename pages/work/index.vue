@@ -26,7 +26,7 @@ console.log(projects);
 
 			<div
 				v-for="(project, index) in projectsByOrder"
-				class="w-full mt-16"
+				class="w-full mt-16 pl-32 pr-10"
 			>
 				<NuxtLink :to="project._path">
 					<h2 class="text-2xl">{{ project.title }}</h2>

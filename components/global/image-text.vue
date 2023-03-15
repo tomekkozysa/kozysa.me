@@ -8,13 +8,13 @@
 		]"
 	>
 		<div
-			class="image flex flex-col lg:flex-row"
+			class="image flex flex-col"
 			:class="[
 				cap ? 'capped' : '',
 				scroll ? `scroll` : '',
 				column
 					? 'flex-col space-y-4'
-					: 'lg:space-x-4 space-y-4 lg:space-y-0',
+					: 'lg:space-x-4 space-y-4 lg:space-y-0 lg:flex-row',
 			]"
 		>
 			<slot name="image" />
@@ -23,11 +23,11 @@
 			v-if="showText"
 			class="text"
 			:class="[
-				text == 'bottom' ? 'self-start' : '',
+				text == 'bottom' ? 'self-end' : '',
 				reverse ? 'lg:pr-8' : 'lg:pl-8',
 			]"
 		>
-			<Caption>
+			<Caption :noborder="noborder" :align="reverse ? 'left' : 'right'">
 				<slot name="caption" />
 			</Caption>
 		</div>
@@ -43,6 +43,7 @@ const props = defineProps([
 	"flexible",
 	"column",
 	"width",
+	"noborder",
 ]);
 const maxWidth = computedMaxWidth(props.width);
 const slots = useSlots();
