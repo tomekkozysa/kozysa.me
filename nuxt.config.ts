@@ -11,6 +11,7 @@ export default defineNuxtConfig({
 	// plugins: [
 	// 	{ src: "@/plugins/vue-dragandscroll", ssr: false, mode: "client" },
 	// ],
+	target: "static",
 	app: {
 		head: {
 			charset: "utf-16",
