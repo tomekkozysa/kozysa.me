@@ -15,6 +15,7 @@
 		<Navigation
 			:expanded="navigationExpanded"
 			@mouseover="navigationExpanded = true"
+			@toggle="(toggleVal) => (navigationExpanded = toggleVal)"
 		/>
 		<section class="mx-auto py-64" @mouseover="navigationExpanded = false">
 			<NuxtPage />

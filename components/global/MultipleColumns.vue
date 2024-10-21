@@ -9,6 +9,6 @@
 	</div>
 </template>
 <script setup>
-const props = defineProps(["width", "caption"]);
-const maxWidth = computedMaxWidth(props.width);
+	const props = defineProps(["width", "caption"]);
+	const maxWidth = computedMaxWidth(props.width);
 </script>

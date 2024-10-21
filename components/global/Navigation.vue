@@ -7,11 +7,15 @@
 			<li><NuxtLink to="/work">Work</NuxtLink></li>
 			<li><NuxtLink to="/about">About</NuxtLink></li>
 		</ul>
-		<NavigationToggle :expanded="expanded" />
+		<NavigationToggle :expanded="expanded" @mousedown="toggleNav" />
 	</nav>
 </template>
 <script setup>
 const props = defineProps(["expanded"]);
+const emit = defineEmits(["toggle"]);
+const toggleNav = () => {
+	emit("toggle", !props.expanded);
+};
 </script>
 <style scoped>
 .navigation {

@@ -34,7 +34,7 @@ const props = defineProps(["expanded"]);
 <style scoped>
 .toggle {
 	display: block;
-	pointer-events: none;
+
 	--yspread1: -3px;
 	--yspread2: 3px;
 	--sw: 3px;
