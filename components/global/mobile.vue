@@ -1,14 +1,42 @@
 <template>
 	<div class="display-wrapper">
 		<div class="display">
-			<nuxt-img :src="image" :alt="alt" lazy preset="work" />
+			<nuxt-img :src="imageSource" :alt="alt" lazy preset="work" ref="image" class="display-image"/>
 		</div>
 	</div>
 </template>
 <script setup>
-const props = defineProps(["image", "alt"]);
+const placeholder = ref('/img/placeholder.png')
+
+const props = defineProps({
+		src:{
+			type:String,
+			required:true,
+			default:()=>'/img/placeholder.png'
+		},
+		alt:{
+			type:String,
+		}
+	});
+
+const imageSource = computed(() => {
+  if(props.src!== null)
+  	return props.src
+else{
+	return placeholder.value
+}
+})
+
+const image = useTemplateRef('image')
+
+const stopdrag = ()=>{}
+const startdrag = (e)=>{}
+
 </script>
 <style scoped>
+.display-image{
+	width:100%
+}
 .display-wrapper {
 	border: 1px solid black;
 	border-radius: 15px;

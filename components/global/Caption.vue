@@ -1,6 +1,6 @@
 <template>
 	<figcaption
-		class="mt-4 max-w-xl flex-0 border-white"
+		class="max-w-xl mt-4 border-black flex-0"
 		:class="[align == 'right' ? 'md:self-end md:text-right' : '', border]"
 	>
 		<slot />

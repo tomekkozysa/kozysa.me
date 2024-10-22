@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="flex lg:items-center w-full flex-wrap"
+		class="flex flex-wrap w-full lg:items-center image-text"
 		:class="[
 			reverse ? 'lg:flex-row-reverse justify-start' : '',
 			flexible ? '' : 'split',
@@ -8,7 +8,7 @@
 		]"
 	>
 		<div
-			class="image flex flex-col"
+			class="flex flex-col w-full image"
 			:class="[
 				cap ? 'capped' : '',
 				scroll ? `scroll` : '',
@@ -23,13 +23,14 @@
 			v-if="showText"
 			class="text"
 			:class="[
-				text == 'bottom' ? 'self-end' : '',
+				text == 'bottom' ? 'self-end' : text == 'top' ? 'self-start' : '',
 				reverse ? 'lg:pr-8' : 'lg:pl-8',
 			]"
 		>
-			<Caption :noborder="noborder" :align="reverse ? 'left' : 'right'">
-				<slot name="caption" />
-			</Caption>
+			<slot name="caption" />
+			<!-- <Caption :noborder="noborder" :align="reverse ? 'left' : 'right'">
+				
+			</Caption> -->
 		</div>
 	</div>
 </template>
@@ -72,5 +73,8 @@ const showText = () => {
 }
 .scroll::-webkit-scrollbar {
 	display: none;
+}
+.image-text{
+	border:1px solid red
 }
 </style>

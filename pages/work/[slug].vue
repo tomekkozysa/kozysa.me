@@ -7,6 +7,7 @@ const { data } = await useAsyncData("work", () =>
 useHead({
 	// as a string,
 	// where `%s` is replaced with the title
+	// title: `${data.title} | Tomasz Kozysa`,
 	titleTemplate: "%s | Tomasz Kozysa",
 	// ... or as a function
 	// titleTemplate: (productCategory) => {
@@ -17,27 +18,20 @@ useHead({
 });
 
 const maxWidth = computedMaxWidth("default");
+const { headerState, setHeaderState } = useHeaderState()
+
 </script>
 <template>
 	<main class="flex flex-col items-center">
-		<section
-			class="sticky top-10 bg-stone-50 pb-4 w-full flex flex-col items-center pl-32 pr-10"
-		>
+		<section class="sticky flex flex-col items-center w-full pb-4 pl-32 pr-10 top-10 bg-stone-50">
 			<div class="w-full" :class="maxWidth">
-				<h1>{{ data.title }}</h1>
+				<h1 v-if="!headerState">{{ data.title }}</h1>
+				<h2 v-else>{{ data.title }}</h2>
 				<p>{{ data.description }}</p>
 			</div>
 		</section>
 		<div>
-			<ContentDoc
-				:document="data"
-				class="content flex flex-col items-center pl-32 pr-10"
-			/>
+			<ContentDoc :document="data" class="flex flex-col items-center justify-start pl-32 pr-10 content" />
 		</div>
 	</main>
 </template>
-<style scoped>
-h1 {
-	@apply text-4xl;
-}
-</style>

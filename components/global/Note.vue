@@ -1,14 +1,14 @@
 <template>
 	<div
-		class="w-full flex flex-col"
+		class="flex flex-col w-full"
 		:class="[align ? `items-${align}` : '', textalign]"
 	>
-		<figcaption
-			class="text-sm mt-2 max-w-xs py-1 border-t-2 w-64 border-black"
+		<div
+			class="w-64 max-w-xs py-1 mt-2 text-sm border-t-2 border-black"
 			:class="[`self-${align}`, textalign]"
 		>
 			{{ text }}
-		</figcaption>
+		</div>
 	</div>
 </template>
 <script setup>

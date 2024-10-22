@@ -1,5 +1,5 @@
 <template>
-	<div class="md:columns-2" :class="maxWidth">
+	<div class="md:columns-2 w-full" :class="maxWidth">
 		<slot />
 	</div>
 </template>

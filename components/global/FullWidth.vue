@@ -1,7 +1,7 @@
 <template>
 	<figure
 		class="full-width flex flex-col"
-		:class="[cap ? 'capped' : '', maxWidth]"
+		:class="[cap ? 'capped' : '']"
 	>
 		<div :class="[scroll ? `scroll` : '']">
 			<slot name="image" />
@@ -12,8 +12,7 @@
 	</figure>
 </template>
 <script setup>
-const props = defineProps(["cap", "scroll", "width", "caption"]);
-const maxWidth = computedMaxWidth(props.width);
+const props = defineProps(["cap", "scroll", "caption"]);
 </script>
 <style scoped>
 .capped {

@@ -1,28 +1,38 @@
 <template>
 	<div>
-		<header
-			class="sticky pl-24 z-10 top-0 h-12 flex items-center"
-			:class="navigationExpanded ? 'text-white' : 'text-black'"
-		>
+		<header ref="header" class="sticky top-0 z-10 flex items-center h-12 pl-24"
+			:class="navigationExpanded ? 'text-white' : 'text-black'">
 			<h1 class="relative z-20">
-				<NuxtLink to="/">Tomasz Kozysa</NuxtLink>
+				<NuxtLink to="/">Tomasz Kozysa {{ is_stuck }}</NuxtLink>
 			</h1>
 		</header>
-		<div
-			class="sticky z-90 top-0 bg-stone-50 h-12"
-			aria-role="decorative"
-		></div>
-		<Navigation
-			:expanded="navigationExpanded"
-			@mouseover="navigationExpanded = true"
-			@toggle="(toggleVal) => (navigationExpanded = toggleVal)"
-		/>
-		<section class="mx-auto py-64" @mouseover="navigationExpanded = false">
+		<div class="sticky top-0 h-12 z-90 bg-stone-50" aria-role="decorative"></div>
+		<Navigation :expanded="navigationExpanded" @mouseover="navigationExpanded = true"
+			@toggle="(toggleVal) => (navigationExpanded = toggleVal)" />
+		<section class="py-64 mx-auto" @mouseover="navigationExpanded = false">
 			<NuxtPage />
 		</section>
 	</div>
-	<footer class="min-h-64 py-32 bg-black pl-24">Footer</footer>
+	<footer class="py-32 pl-24 bg-black min-h-64">Footer</footer>
 </template>
 <script setup>
 const navigationExpanded = ref(false);
+const header = useTemplateRef('header')
+const offsetStore = ref(null)
+const is_stuck = ref(false)
+
+const { headerState, setHeaderState } = useHeaderState()
+
+onMounted(() => {
+	window.addEventListener('scroll', () => {
+		if (header.value) {
+			if (header.value.offsetTop > 300) {
+				setHeaderState(true)
+			}
+			else {
+				setHeaderState(false)
+			}
+		}
+	})
+})
 </script>

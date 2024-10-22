@@ -1,6 +1,10 @@
 <script setup>
 const projects = await queryContent("/work").find();
-const projectsByOrder = projects.sort((a, b) => (a.order > b.order ? 1 : -1));
+const projectsByOrder = projects.sort((a, b) => {
+	if (a.order == null) a.order = 100; 
+	const sorted = a.order > b.order ? 1 : -1
+	return sorted
+	});
 console.log(projects);
 </script>
 <template>
