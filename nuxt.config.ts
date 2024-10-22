@@ -6,12 +6,14 @@ export default defineNuxtConfig({
 		"@nuxt/content",
 		"@nuxt/image-edge",
 		"@vueuse/nuxt",
-		"@tailwindcss/typography",
+		// "@tailwindcss/typography",
 	],
+
 	// plugins: [
 	// 	{ src: "@/plugins/vue-dragandscroll", ssr: false, mode: "client" },
 	// ],
 	target: "static",
+
 	app: {
 		head: {
 			charset: "utf-16",
@@ -32,6 +34,7 @@ export default defineNuxtConfig({
 			],
 		},
 	},
+
 	hooks: {
 		// Doc: https://content.nuxtjs.org/advanced#contentfilebeforeinsert
 		"content:file:beforeInsert": async (document, database) => {
@@ -49,8 +52,8 @@ export default defineNuxtConfig({
 			}
 		},
 	},
+
 	image: {
-		target: "static",
 		// The screen sizes predefined by `@nuxt/image`:
 		screens: {
 			xs: 320,
@@ -68,11 +71,13 @@ export default defineNuxtConfig({
 				},
 			},
 		},
-		provider: "netlify",
-		netlify: {
-			baseURl: process.env.IMAGES_URL,
-		},
+		// provider: "netlify",
+		// netlify: {
+		// 	baseURl: process.env.IMAGES_URL,
+		// },
 	},
+
+	css: ['~/assets/css/main.css'],
 	tailwindcss: {
 		config: {
 			plugins: [tailwindTypography],
@@ -97,26 +102,5 @@ export default defineNuxtConfig({
 			},
 		},
 	},
-	// tailwindcss: {
-	// 	cssPath: "~/assets/css/tailwind.css",
-	// 	configPath: "tailwind.config",
-	// 	exposeConfig: false,
-	// 	config: {
-	// 		theme: {},
-	// 		plugins: [tailwindTypography],
-	// 		content: [
-	// 			`/components/**/*.{vue,js,ts}`,
-	// 			`/layouts/**/*.vue`,
-	// 			`/pages/**/*.vue`,
-	// 			`/composables/**/*.{js,ts}`,
-	// 			`/plugins/**/*.{js,ts}`,
-	// 			`/App.{js,ts,vue}`,
-	// 			`/app.{js,ts,vue}`,
-	// 			`/Error.{js,ts,vue}`,
-	// 			`/error.{js,ts,vue}`,
-	// 		],
-	// 	},
-	// 	injectPosition: 0,
-	// 	viewer: true,
-	// },
+	compatibilityDate: "2024-10-22",
 });
