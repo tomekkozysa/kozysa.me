@@ -1,9 +1,7 @@
 <template>
-	<figcaption
-		class="max-w-xl mt-4 border-black flex-0"
-		:class="[align == 'right' ? 'md:self-end md:text-right' : '', border]"
-	>
-		<slot />
+	<figcaption class="max-w-xl mt-4 border-black flex-0"
+		:class="[align == 'right' ? 'md:self-end md:text-right' : '', border]">
+		<ContentSlot :use="$slots.default" unwrap="p" />
 	</figcaption>
 </template>
 <script setup>

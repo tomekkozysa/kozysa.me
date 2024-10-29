@@ -3,7 +3,7 @@ title: "mediagnang – Routes PWA"
 description: "Realtime delivery tracking app"
 head: "something for the head"
 thumbnail: /img/work/image-halfwidth.png
-order: 1
+order: 8
 ---
 
 ::Tags-{:list='["vue.js/nuxt","vuetify","Google Maps API","Firebase"]'}

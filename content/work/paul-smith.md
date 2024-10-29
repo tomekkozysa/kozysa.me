@@ -3,7 +3,7 @@ title: "Paul Smith"
 description: "Front End Development"
 head: "something for the head"
 thumbnail: /img/work/image-halfwidth.png
-order: 1
+order: 7
 ---
 
 ::Tags-{:list='["Vue.js","Tailwind","GraphQl"]'}
@@ -13,7 +13,7 @@ order: 1
 ::TextColumns
 
 <p>
-I worked along a team of front and back end developers on a newly re-desisgned e-commerce website for this iconic brand. On the course of the project I contributed multiple components and responsive pages. Front end stack consisted of vue.js, tailwind and graphql. Project run across two repositories, one for the website and the second one for the library of components where we also used storybook to manage and test them. </p>
+I worked along a team of front and back end developers on a newly re-designed e-commerce website for this iconic brand. On the course of the project I contributed multiple components and responsive pages. Front end stack consisted of vue.js, tailwind and graphql. Project run across two repositories, one for the website and the second one for the library of components where we also used storybook to manage and test them. </p>
 ::
 ::Spacer
 ::
@@ -48,12 +48,13 @@ Aside from developing User Dashboard, I have also developed multiple sidebar com
 ::
 ::Spacer
 ::
+
 ::MultipleColumns-{width=auto}
 #image
-<mobile image="/img/work/ps/screencapture-127-0-0-1-8000-uk-customer-account-2022-02-25-17_28_11.png" class="w-[320px]"> </mobile>
-<mobile image="/img/work/ps/screencapture-127-0-0-1-8000-uk-customer-wishlist-2022-02-25-17_31_47.png" class="w-[320px]"> </mobile>
-<mobile image="/img/work/ps/screencapture-127-0-0-1-8000-uk-customer-orders-1001078968-2022-02-25-17_31_34.png" class="w-[320px]"> </mobile>
-<mobile image="/img/work/ps/screencapture-127-0-0-1-8000-uk-customer-newsletter-2022-02-25-17_35_02.png" class="w-[320px]"> </mobile>
+<mobile src="/img/work/ps/screencapture-127-0-0-1-8000-uk-customer-account-2022-02-25-17_28_11.png" class="w-[320px]"> </mobile>
+<mobile src="/img/work/ps/screencapture-127-0-0-1-8000-uk-customer-wishlist-2022-02-25-17_31_47.png" class="w-[320px]"> </mobile>
+<mobile src="/img/work/ps/screencapture-127-0-0-1-8000-uk-customer-orders-1001078968-2022-02-25-17_31_34.png" class="w-[320px]"> </mobile>
+<mobile src="/img/work/ps/screencapture-127-0-0-1-8000-uk-customer-newsletter-2022-02-25-17_35_02.png" class="w-[320px]"> </mobile>
 ::
 ::Spacer-{size=text}
 ::

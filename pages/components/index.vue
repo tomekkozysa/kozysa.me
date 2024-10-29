@@ -1,6 +1,6 @@
 <script setup>
 
-const projects = await queryContent("/work").find();
+const projects = await queryContent("/components").find();
 const projectsByOrder = projects.sort((a, b) => {
 	if (a.order == null) a.order = 100;
 	const sorted = a.order > b.order ? 1 : -1
@@ -14,9 +14,7 @@ const maxWidth = computedMaxWidth("default");
 </script>
 <template>
 	<main class="flex flex-col items-center">
-
-
-		<ContentDoc :path="`/work/`" v-slot="{ doc }"
+		<ContentDoc :path="`/components/`" v-slot="{ doc }"
 			class="w-full flex flex-col items-center justify-start pl-32 pr-10" />
 
 		<div class="w-full flex flex-col items-center justify-start pl-32 pr-10">

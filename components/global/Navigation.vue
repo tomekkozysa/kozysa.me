@@ -3,7 +3,10 @@
 		:class="expanded ? 'is_open' : 'is_closed'">
 		<ul class="w-full text-left text-3xl underline">
 			<li>
-				<NuxtLink to="/work">Work</NuxtLink>
+				<NuxtLink to="/components">Components</NuxtLink>
+			</li>
+			<li>
+				<NuxtLink to="/layouts">Layouts</NuxtLink>
 			</li>
 			<li>
 				<NuxtLink to="/about">About</NuxtLink>

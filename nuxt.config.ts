@@ -38,11 +38,7 @@ export default defineNuxtConfig({
 	hooks: {
 		// Doc: https://content.nuxtjs.org/advanced#contentfilebeforeinsert
 		"content:file:beforeInsert": async (document, database) => {
-			// search for markdown containing
-			// only `specialNotice` property.
 			if (document.extension === ".md" && document.thumbnail) {
-				// Replace Markdown string in database
-				// with the JSON ATS version
 				document.thumbnail = await database.markdown.toJSON(
 					document.thumbnail
 				);
@@ -71,10 +67,6 @@ export default defineNuxtConfig({
 				},
 			},
 		},
-		// provider: "netlify",
-		// netlify: {
-		// 	baseURl: process.env.IMAGES_URL,
-		// },
 	},
 
 	css: ['~/assets/css/main.css'],
@@ -97,7 +89,13 @@ export default defineNuxtConfig({
 				extend: {
 					maxWidth: {
 						"8xl": "96rem",
+						"ch": "50ch",
 					},
+					minHeight: {
+						"90vh": "90vh",
+						"80vh": "80vh",
+						"70vh": "70vh",
+					}
 				},
 			},
 		},

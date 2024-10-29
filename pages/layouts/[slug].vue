@@ -1,7 +1,7 @@
 <script setup>
 const route = useRoute();
-const { data } = await useAsyncData("work", () =>
-	queryContent("/work", route.params.slug).findOne()
+const { data } = await useAsyncData("layouts", () =>
+	queryContent("/layouts", route.params.slug).findOne()
 );
 
 useHead({
@@ -9,15 +9,14 @@ useHead({
 });
 
 const maxWidth = computedMaxWidth("default");
-const { headerState, setHeaderState } = useHeaderState()
+// const { headerState, setHeaderState } = useHeaderState()
 
 </script>
 <template>
 	<main class="flex flex-col items-center">
 		<section class="flex flex-col items-center w-full pb-4 pl-32 pr-10 top-10 bg-stone-50">
 			<div class="w-full" :class="maxWidth">
-				<h1 v-if="!headerState">{{ data.title }}</h1>
-				<h2 v-else>{{ data.title }}</h2>
+				<h2>{{ data.title }}</h2>
 				<p>{{ data.description }}</p>
 			</div>
 		</section>

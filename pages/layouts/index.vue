@@ -1,22 +1,21 @@
 <script setup>
 
-const projects = await queryContent("/work").find();
+const projects = await queryContent("/layouts").find();
 const projectsByOrder = projects.sort((a, b) => {
 	if (a.order == null) a.order = 100;
 	const sorted = a.order > b.order ? 1 : -1
+	console.log(a)
 	return sorted
 });
 
-projectsByOrder.forEach(p => console.log(p))
+projectsByOrder.forEach(p => console.log({ p }))
 const filtered = projectsByOrder.filter(p => !p._file.includes('index.md'))
 const maxWidth = computedMaxWidth("default");
 
 </script>
 <template>
 	<main class="flex flex-col items-center">
-
-
-		<ContentDoc :path="`/work/`" v-slot="{ doc }"
+		<ContentDoc :path="`/layouts/`" v-slot="{ doc }"
 			class="w-full flex flex-col items-center justify-start pl-32 pr-10" />
 
 		<div class="w-full flex flex-col items-center justify-start pl-32 pr-10">

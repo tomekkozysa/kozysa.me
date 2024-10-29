@@ -1,4 +1,5 @@
 export default function computedMaxWidth(width) {
+	const default_max_width =  "max-w-6xl"
 	return computed(() => {
 		if (width == "full") {
 			return "max-w-full";
@@ -9,6 +10,9 @@ export default function computedMaxWidth(width) {
 		} else if (width == "auto") {
 			return "";
 		} 
-		return "max-w-6xl";
+		else if (width == "default") {
+			return default_max_width;
+		} 
+		return default_max_width;
 	});
 }
