@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col" :class="[is_cap ? 'capped' : '', is_stacked ? 'mb-8' : '', maxWidth]">
-        <div class="flex flex-1"
-            :class="[is_scroll ? `scroll` : '', is_column ? 'flex-col space-y-8' : 'flex-row space-x-8']">
+        <div class="flex flex-1 flex-col space-y-8"
+            :class="[is_scroll ? `scroll` : '', is_column ? '' : 'lg:flex-row lg: lg:space-y-0 lg:space-x-8']">
 
             <slot name="image" />
         </div>

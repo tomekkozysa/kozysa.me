@@ -1,38 +1,67 @@
 <template>
-	<div>
-		<header ref="header" class="sticky top-0 z-10 flex items-center h-12 pl-24"
-			:class="navigationExpanded ? 'text-white' : 'text-black'">
-			<h1 class="relative z-20">
+	<div class="px-8">
+		<header ref="header" class="flex w-full pt-4 relative"
+			:class="is_mobile ? 'flex-col' : 'items-center justify-between'">
+			<h1 class="relative z-20 shrink-0">
 				<NuxtLink to="/">Tomasz Kozysa</NuxtLink>
 			</h1>
+
+			<NavigationToggle v-if="is_mobile" @mousedown="toggleNav" :expanded="isNavOpen"
+				class="absolute toggle top-7 right-0" />
+			<NavigationPanel v-if="is_mobile" :is_open="isNavOpen" @toggle="toggleNav" />
+
+			<Navigation v-else />
 		</header>
-		<div class="sticky top-0 h-12 z-90 bg-stone-50" aria-role="decorative"></div>
-		<Navigation :expanded="navigationExpanded" @mouseover="navigationExpanded = true"
-			@toggle="(toggleVal) => (navigationExpanded = toggleVal)" />
-		<section class="py-64 mx-auto min-h-90vh" @mouseover="navigationExpanded = false">
+
+		<main class="mx-auto min-h-90vh pt-48 flex flex-col items-center">
 			<NuxtPage />
-		</section>
+		</main>
+
 	</div>
-	<footer class="py-32 pl-24 bg-black min-h-64">Footer</footer>
+	<footer class="py-32 text-white bg-black min-h-64">Footer</footer>
 </template>
 <script setup>
-const navigationExpanded = ref(false);
-const header = useTemplateRef('header')
-const offsetStore = ref(null)
-const is_stuck = ref(false)
+import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 
-const { headerState, setHeaderState } = useHeaderState()
+const breakpoints = useBreakpoints(breakpointsTailwind)
+
+
+const is_mobile = ref(false)
+
+const isNavOpen = ref(false)
+const toggleNav = () => {
+	isNavOpen.value = !isNavOpen.value
+};
+
 
 onMounted(() => {
-	window.addEventListener('scroll', () => {
-		if (header.value) {
-			if (header.value.offsetTop > 300) {
-				setHeaderState(true)
-			}
-			else {
-				setHeaderState(false)
-			}
-		}
-	})
+	console.log(breakpoints.smallerOrEqual('md').value)
+	is_mobile.value = breakpoints.smallerOrEqual('md').value
+
+	window.addEventListener(
+		'resize',
+		() => {
+			is_mobile.value = breakpoints.smallerOrEqual('md').value
+			console.log(is_mobile.value)
+		},
+		// debounce(() => {
+		// 	is_mobile.value = breakpoints.smallerOrEqual('md')
+		// }, 200),
+		false
+	)
 })
+
+const debounce = function (func, wait) {
+	var timeout
+	return () => {
+		const later = function () {
+			timeout = null
+		}
+		const callNow = !timeout
+		clearTimeout(timeout)
+		timeout = setTimeout(later, wait)
+		if (callNow) func()
+	}
+}
+
 </script>

@@ -14,18 +14,17 @@ const maxWidth = computedMaxWidth("default");
 
 </script>
 <template>
-	<main class="flex flex-col items-center">
-		<ContentDoc :path="`/layouts/`" v-slot="{ doc }"
-			class="w-full flex flex-col items-center justify-start pl-32 pr-10" />
 
-		<div class="w-full flex flex-col items-center justify-start pl-32 pr-10">
-			<div v-for="(project, index) in filtered" class="w-full mt-16" :class="[maxWidth]">
-				<NuxtLink v-if="project.online" :to="project._path">
-					<h2 class="text-2xl">{{ project.title }}</h2>
-					<span class="text-sm">{{ project.description }}</span>
-				</NuxtLink>
-			</div>
+	<ContentDoc :path="`/layouts/`" v-slot="{ doc }" class="w-full flex flex-col items-center justify-start" />
+
+	<div class="w-full flex flex-col items-center justify-start">
+		<div v-for="(project, index) in filtered" class="w-full mt-16" :class="[maxWidth]">
+			<NuxtLink v-if="project.online" :to="project._path">
+				<h2 class="text-2xl">{{ project.title }}</h2>
+				<span class="text-sm">{{ project.description }}</span>
+			</NuxtLink>
 		</div>
+	</div>
 
-	</main>
+
 </template>

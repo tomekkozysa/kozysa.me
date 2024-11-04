@@ -13,17 +13,17 @@ const maxWidth = computedMaxWidth("default");
 
 </script>
 <template>
-	<main class="flex flex-col items-center">
-		<section class="sticky flex flex-col items-center w-full pb-4 pl-32 pr-10 top-10 bg-stone-50">
-			<div class="w-full" :class="maxWidth">
-				<h2>{{ data.title }}</h2>
-				<p>{{ data.description }}</p>
-			</div>
-		</section>
-		<div class="w-full">
-			<ContentDoc :document="data" class="flex flex-col items-center justify-start pl-32 pr-10 content" />
+
+	<section class="sticky flex flex-col items-center w-full">
+		<div class="w-full" :class="maxWidth">
+			<h2>{{ data.title }}</h2>
+			<p>{{ data.description }}</p>
 		</div>
-	</main>
+	</section>
+	<div class="w-full">
+		<ContentDoc :document="data" class="flex flex-col items-center justify-start content" />
+	</div>
+
 </template>
 <style scoped>
 ::v-deep p {

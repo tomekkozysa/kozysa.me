@@ -32,8 +32,8 @@ const props = defineProps({
 		required: false
 	},
 	cap: {
-		type: Boolean,
-		default: false,
+		type: String,
+		default: null,
 		required: false
 	},
 	scroll: {
@@ -77,7 +77,13 @@ const mediaWidth = computed(() => {
 </script>
 <style scoped>
 .media {
-	width: v-bind(mediaWidth);
+	/* width: v-bind(mediaWidth); */
+	width: fit-content;
+}
+
+.text {
+	width: fit-content;
+	flex-shrink: 1;
 }
 
 .capped {
@@ -95,13 +101,5 @@ const mediaWidth = computed(() => {
 	scroll-behavior: smooth;
 	position: relative;
 	--scroll-tip-opacity: 1;
-}
-
-.scroll:hover {
-	--scroll-tip-opacity: 0;
-}
-
-.scroll::-webkit-scrollbar {
-	display: none;
 }
 </style>

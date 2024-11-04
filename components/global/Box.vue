@@ -1,9 +1,15 @@
 <template>
-    <div class="box">
-        <slot></slot>
+    <div class="relative" @mouseover="showScrollTag = false" @mouseout="showScrollTag = true">
+        <div class="box" :class="[hideScrollbar ? 'hide-scrollbar' : '']">
+            <slot></slot>
+        </div>
+        <div class="scroll-info w-full text-center text-sm absolute bottom-2" :class="[showScrollTag ? 'show' : '']">
+            Scroll content
+        </div>
     </div>
 </template>
 <script setup>
+const showScrollTag = ref(true)
 const props = defineProps({
     width: {
         type: String,
@@ -39,8 +45,23 @@ const props = defineProps({
         type: String,
 
     },
+    overflowX: {
+        type: String,
+        default: 'auto',
+        required: false,
+    },
+    overflowY: {
+        type: String,
+        default: 'auto',
+        required: false,
+    },
     grow: {
         type: String,
+    },
+    hideScrollbar: {
+        type: Boolean,
+        default: true,
+        required: false,
     },
     shrink: {
         type: String,
@@ -59,21 +80,28 @@ const flexGrow = computed(() => `${props.grow}`)
     max-height: v-bind(maxHeight);
     min-width: v-bind(minWidth);
     min-height: v-bind(minHeight);
+    overflow-x: v-bind(overflowX);
+    overflow-y: v-bind(overflowY);
+
     aspect-ratio: v-bind(aspectRatio);
 }
 
-
-.display img {
-    transition: opacity .3s ease-in-out;
+.hide-scrollbar {
+    overflow: hidden;
+    overflow-y: auto;
+    user-select: none;
+    ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    position: relative;
+    --scroll-tip-opacity: 1;
 }
 
-.display.is_loading {
-    background: var(--svgicon) no-repeat center;
-    --svgicon: url('data:image/svg+xml;utf-8,<svg width="200px" height="200px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><g><line x1="100.00" y1="91.00" x2="100.00" y2="91.00" stroke-width="5.50" stroke="violet" stroke-linecap="round"><animate dur="2180ms" repeatCount="indefinite" attributeName="stroke" values="violet;indigo;blue;lightgreen;yellow;darkorange;red" begin="0ms"></animate></line><line x1="107.79" y1="104.50" x2="107.79" y2="104.50" stroke-width="5.50" stroke="indigo" stroke-linecap="round"><animate dur="2180ms" repeatCount="indefinite" attributeName="stroke" values="violet;indigo;blue;lightgreen;yellow;darkorange;red" begin="726.6666666666666ms"></animate></line><line x1="92.21" y1="104.50" x2="92.21" y2="104.50" stroke-width="5.50" stroke="blue" stroke-linecap="round"><animate dur="2180ms" repeatCount="indefinite" attributeName="stroke" values="violet;indigo;blue;lightgreen;yellow;darkorange;red" begin="1453.3333333333333ms"></animate></line></g></svg>');
+.scroll-info {
+    opacity: 0;
+}
 
-
-    img {
-        opacity: .1;
-    }
+.scroll-info.show {
+    opacity: 1
 }
 </style>
