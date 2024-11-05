@@ -6,6 +6,8 @@ thumbnail: /img/work/image-halfwidth.png
 order: 1
 online: true
 ---
+::Spacer-{size=sm}
+::
 
 ::Tags-{:list='["Tag 1","Tag 2","Tag 3"]'}
 ::
@@ -18,43 +20,51 @@ online: true
 
 
 
-::MediaText-{column=true text=top}
-#image
+::MediaText
+#media
 <display src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>
-#caption
-<p class="mt-8">
-MediaText is interesting, has some options, let's explore
-</p>
+#text
+Default media text splits the space 50/50
 ::
 ::Spacer
 ::
 
-::MediaText-{column=true reverse=true}
-#image
+::MediaText-{reverse=true}
+#media
 <display src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>
-#caption
+#text
 By default, text is aligned to left and center. It can be anchored to the top or bottom, and right aligned.
 ::
 ::Spacer
 ::
 
 
-::MediaText-{column=true textAlign=top cap=60vh scroll=true}
-#image
+::MediaText-{size=lg width=wide}
+#media
 <display src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>
 <display src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>
 <display src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>
 <display src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>
-#caption
-MediaText with text on top and height capped at 60vh
+#text
+MediaText as a column with text on top and height 
 ::
 ::Spacer
 ::
 
-::MediaText-{reverse=true width=wid textAlign=bottom}
-#image
+::MediaText-{textAlign=center size=lg :column=true}
+#media
 <display src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>
-#caption
+<display src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>
+#text
+MediaText as a column with text on top and height 
+::
+::Spacer
+::
+
+::MediaText-{reverse=true width=wide textAlign=bottom}
+#media
+<display src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>
+#text
 MediaText component reversed, set to wide 
 ::
 ::Spacer

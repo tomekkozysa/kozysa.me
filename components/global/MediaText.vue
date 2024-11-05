@@ -5,20 +5,16 @@
 		maxWidth,
 	]">
 		<div class="flex flex-col media" :class="[
-		cap ? 'capped' : '',
-		scroll ? `scroll` : '',
-		column ? 'flex-col space-y-8' : 'lg:space-x-8 space-y-8 lg:space-y-0 lg:flex-row',
-		mediaWidth
+		column ? 'flex-col space-y-8' : 'lg:space-x-8 space-y-8 lg:space-y-0 lg:flex-row', size
 	]">
-			<slot name="image" />
+			<slot name="media" />
 		</div>
 		<div class="text" :class="[
 		textAlign == 'bottom' ? 'self-end' : textAlign == 'top' ? 'self-start' : '',
 		reverse ? 'lg:pr-8' : 'lg:pl-8',
 	]">
 			<div class="max-w-ch">
-				<slot name="caption" />
-
+				<slot name="text" />
 			</div>
 		</div>
 	</div>
@@ -31,19 +27,9 @@ const props = defineProps({
 		default: false,
 		required: false
 	},
-	cap: {
-		type: String,
-		default: null,
-		required: false
-	},
-	scroll: {
-		type: Boolean,
-		default: false,
-		required: false
-	},
 	column: {
 		type: Boolean,
-		default: true,
+		default: false,
 		required: false
 	},
 	flexible: {
@@ -61,21 +47,16 @@ const props = defineProps({
 		default: "center",
 		required: false
 	},
-	mediaSize: {
+	size: {
 		type: String,
-		default: '7/12',
+		default: 'half',
 		required: false
 	}
 });
 const maxWidth = computedMaxWidth(props.width);
-const mediaWidth = computed(() => {
-	const sizes = props.mediaSize.split('/')
-	return sizes[0] * 100 / sizes[1] + '%'
-
-})
 
 </script>
-<style scoped>
+<style scoped >
 .media {
 	/* width: v-bind(mediaWidth); */
 	width: fit-content;
@@ -86,20 +67,18 @@ const mediaWidth = computed(() => {
 	flex-shrink: 1;
 }
 
-.capped {
-	height: v-bind("cap");
-	max-height: fit-content;
-	overflow: hidden;
-}
-
-.scroll {
-	overflow: hidden;
-	overflow-y: auto;
-	user-select: none;
-	ms-overflow-style: none;
-	scrollbar-width: none;
-	scroll-behavior: smooth;
-	position: relative;
-	--scroll-tip-opacity: 1;
+.split{
+	.lg{
+		@apply w-8/12;
+	}
+	.md{
+		@apply w-7/12;
+	}
+	.sm{
+		@apply w-4/12;
+	}
+	.half{
+		@apply w-6/12;
+	}
 }
 </style>

@@ -1,11 +1,11 @@
 <template>
-    <div class="flex flex-col" :class="[is_cap ? 'capped' : '', is_stacked ? 'mb-8' : '', maxWidth]">
+    <div class="flex flex-col" :class="[stacked ? 'mb-8' : '', maxWidth]">
         <div class="flex flex-1 flex-col space-y-8"
-            :class="[is_scroll ? `scroll` : '', is_column ? '' : 'lg:flex-row lg: lg:space-y-0 lg:space-x-8']">
+            :class="[ascolumn ? '' : 'lg:flex-row lg: lg:space-y-0 lg:space-x-8']">
 
             <slot name="image" />
         </div>
-        <Caption v-if="!is_stacked" :align="caption">
+        <Caption v-if="!stacked" :align="caption">
             <slot name="caption" />
         </Caption>
     </div>
@@ -13,16 +13,6 @@
 <script setup>
 const props = defineProps(
     {
-        cap: {
-            type: String,
-            required: false,
-            default: 'none'
-        },
-        scroll: {
-            type: String,
-            required: false,
-            default: "false"
-        },
         caption: {
             type: String,
             required: false,
@@ -34,42 +24,17 @@ const props = defineProps(
             default: "default"
         },
         ascolumn: {
-            type: String,
+            type: Boolean,
             required: false,
-            default: "false"
+            default: false
         },
         stacked: {
-            type: String,
+            type: Boolean,
             required: false,
-            default: "false"
+            default: false
         },
     });
 
-
 const maxWidth = computedMaxWidth(props.width);
-const slots = useSlots();
-const is_stacked = computed(() => props.stacked == 'true')
-const is_column = computed(() => props.ascolumn == 'true')
-const is_scroll = computed(() => props.scroll == 'true')
-const is_cap = computed(() => props.cap != "none")
-
 </script>
-<style scoped>
-.capped {
-    max-height: v-bind("cap");
-    overflow: hidden;
-}
-
-.scroll {
-    overflow: hidden;
-    overflow-y: auto;
-    user-select: none;
-    ms-overflow-style: none;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-}
-
-.scroll::-webkit-scrollbar {
-    display: none;
-}
-</style>
+<style scoped></style>

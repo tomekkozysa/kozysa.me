@@ -8,23 +8,16 @@ online: true
 ---
 
 ::Text-{columns=2}
-There are different ways of using columns component, they work great for multi image content that requires a single label
+There are different ways of using columns component, they work great for multi image content that requires a short label
 
-There are different ways of using columns component, they work great for multi image content that requires a single label
-
-There are different ways of using columns component, they work great for multi image content that requires a single label
-
-There are different ways of using columns component, they work great for multi image content that requires a single label
 ::
 ::Spacer
 ::
-::Media-{width=wide ascolumn=true cap=60vh scroll=true}
+::Media
 #image
 <display alt="project image" src="/img/full_size_169.png" src-width="4000" src-height="2250"> </display>
-<display alt="project image" src="/img/full_size_169.png" src-width="4000" src-height="2250"> </display>
-<display alt="project image" src="/img/full_size_169.png" src-width="4000" src-height="2250"> </display>
 #caption
-Extended width(wide) Media capped at 60vh with scroll enabled
+Default Media state
 ::
 ::Spacer
 ::
@@ -35,8 +28,10 @@ Extended width(wide) Media capped at 60vh with scroll enabled
 #caption
 Full width Media
 ::
+
 ::Spacer
 ::
+
 ::Media-{caption=left}
 #image
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>

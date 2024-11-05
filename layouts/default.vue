@@ -3,7 +3,7 @@
 		<header ref="header" class="flex w-full pt-4 relative"
 			:class="is_mobile ? 'flex-col' : 'items-center justify-between'">
 			<h1 class="relative z-20 shrink-0">
-				<NuxtLink to="/">Tomasz Kozysa</NuxtLink>
+				<NuxtLink to="/">Portfolio</NuxtLink>
 			</h1>
 
 			<NavigationToggle v-if="is_mobile" @mousedown="toggleNav" :expanded="isNavOpen"
@@ -42,26 +42,9 @@ onMounted(() => {
 		'resize',
 		() => {
 			is_mobile.value = breakpoints.smallerOrEqual('md').value
-			console.log(is_mobile.value)
 		},
-		// debounce(() => {
-		// 	is_mobile.value = breakpoints.smallerOrEqual('md')
-		// }, 200),
 		false
 	)
 })
-
-const debounce = function (func, wait) {
-	var timeout
-	return () => {
-		const later = function () {
-			timeout = null
-		}
-		const callNow = !timeout
-		clearTimeout(timeout)
-		timeout = setTimeout(later, wait)
-		if (callNow) func()
-	}
-}
 
 </script>

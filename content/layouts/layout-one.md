@@ -71,32 +71,17 @@ Mobile layouts are difficult to present, here is a set up that may help tackle t
 ::Spacer
 ::
 
-::MediaText-{cap=50vh :scroll=true media-size= 5/12}
+::MediaText-{size=md}
 #image
-<box width=100% max-width=425px height="650px" max-height=650px>
+<box width=100% max-width=425px height=100% max-height=70vh :overflowY=true>
     <display alt="project image" src="/img/long_9x32.png" :src-width= 1125 :src-height=4000> </display>
 </box>
 #caption
-Use text to explain objectives, hurdles or achievements
+Use text to explain objectives, hurdles or achievements, capped with box component
 ::
 
 ::Spacer
 ::
-
-
-
-::MediaText-{cap=50vh :scroll=true media-size= 5/12}
-#image
-<box width=100% max-width=425px height="650px" max-height=650px>
-    <display alt="project image" src="/img/long_9x32.png" :src-width= 1125 :src-height=4000> </display>
-</box>
-#caption
-Use text to explain objectives, hurdles or achievements
-::
-
-::Spacer
-::
-
 
 
 ::Media-{caption=right width=wide}

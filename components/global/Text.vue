@@ -12,7 +12,6 @@ const props = defineProps({
 	align: { type: String, default: "left", required: false },
 	columns: { type: Number, default: 0, required: false },
 	width: { type: String, default: '', required: false }
-	// nocap: { type: String, default: '', required: false }
 })
 
 const maxWidth = computedMaxWidth(props.width);
