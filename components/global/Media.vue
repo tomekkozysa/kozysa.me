@@ -3,7 +3,7 @@
         <div class="flex flex-1 flex-col space-y-8"
             :class="[ascolumn ? '' : 'lg:flex-row lg: lg:space-y-0 lg:space-x-8']">
 
-            <slot name="image" />
+            <slot name="media" />
         </div>
         <Caption v-if="!stacked" :align="caption">
             <slot name="caption" />

@@ -4,11 +4,9 @@ const projects = await queryContent("/layouts").find();
 const projectsByOrder = projects.sort((a, b) => {
 	if (a.order == null) a.order = 100;
 	const sorted = a.order > b.order ? 1 : -1
-	console.log(a)
 	return sorted
 });
 
-projectsByOrder.forEach(p => console.log({ p }))
 const filtered = projectsByOrder.filter(p => !p._file.includes('index.md'))
 const maxWidth = computedMaxWidth("default");
 

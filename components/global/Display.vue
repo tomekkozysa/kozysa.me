@@ -1,7 +1,7 @@
 <template>
 	<div class="display w-full" :class="[is_loading ? 'is_loading' : '', maxWidthCSS]">
 		<nuxt-img ref="image" :src="imageSource" :alt="alt" :placeholder="placeholder" lazy :width="srcWidth"
-			:quality="90" :height="srcHeight" sizes="sm:100vw md:100vw lg:100vw xl:100vw" format="webp"
+			:quality="90" :height="srcHeight" sizes="sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw 2xl:100vw" format="webp"
 			@load="onImageLoaded" />
 	</div>
 </template>
@@ -26,7 +26,6 @@ const props = defineProps({
 	},
 });
 
-const maxWidthCSS = computed(() => `${props.maxWidth}`)
 
 const img = useImage()
 const is_loading = ref(true)

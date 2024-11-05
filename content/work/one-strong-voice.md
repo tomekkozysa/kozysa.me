@@ -3,6 +3,7 @@ title: "One Strong Voice"
 description: "Capmaign microsite"
 head: "something for the head"
 thumbnail: /img/work/image-halfwidth.png
+online: true
 ---
 
 Project one is here!!! And we need to keep working on this!

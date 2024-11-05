@@ -4,21 +4,22 @@ description: "Front End Development"
 head: "something for the head"
 thumbnail: /img/work/image-halfwidth.png
 order: 7
+online: true
 ---
 
 ::Tags-{:list='["Vue.js","Tailwind","GraphQl"]'}
 ::
 ::Spacer-{size=sm}
 ::
-::TextColumns
 
-<p>
-I worked along a team of front and back end developers on a newly re-designed e-commerce website for this iconic brand. On the course of the project I contributed multiple components and responsive pages. Front end stack consisted of vue.js, tailwind and graphql. Project run across two repositories, one for the website and the second one for the library of components where we also used storybook to manage and test them. </p>
+::Text
+I worked along a team of front and back end developers on a newly re-designed e-commerce website for this iconic brand. On the course of the project I contributed multiple components and responsive pages. Front end stack consisted of vue.js, tailwind and graphql. Project run across two repositories, one for the website and the second one for the library of components where we also used storybook to manage and test them.
 ::
 ::Spacer
 ::
-::FullWidth-{caption=right}
-#image
+
+::Media-{caption=right}
+#media
 <display alt="project image" src="/img/work/ps/homepage.png">
 #caption
 Home page

@@ -6,6 +6,6 @@ thumbnail: /img/work/image-halfwidth.png
 ---
 
 ::Text
-# Components
+# Work projects
 This is a basic set of components along with demo pages
 ::

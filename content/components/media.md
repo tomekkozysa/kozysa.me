@@ -14,7 +14,7 @@ There are different ways of using columns component, they work great for multi i
 ::Spacer
 ::
 ::Media
-#image
+#media
 <display alt="project image" src="/img/full_size_169.png" src-width="4000" src-height="2250"> </display>
 #caption
 Default Media state
@@ -23,7 +23,7 @@ Default Media state
 ::
 
 ::Media-{width=full}
-#image
+#media
 <display alt="project image" src="/img/full_size_169.png" src-width="4000" src-height="2250"> </display>
 #caption
 Full width Media
@@ -33,7 +33,7 @@ Full width Media
 ::
 
 ::Media-{caption=left}
-#image
+#media
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"></display>
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"></display>
@@ -44,7 +44,7 @@ multiple columns example
 ::
 
 ::Media-{width=wide caption=right}
-#image
+#media
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250" ></display>
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"></display>
@@ -55,7 +55,7 @@ Media example
 ::Spacer
 ::
 ::Media-{stacked=true}
-#image
+#media
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"></display>
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"></display>
@@ -63,7 +63,7 @@ Media example
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"></display>
 ::
 ::Media-{caption=left}
-#image
+#media
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"></display>
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"></display>
@@ -78,7 +78,7 @@ Media stacking example, requires *stacked* to be set to *true* in order to adjus
 ::
 
 ::Media-{caption=right}
-#image
+#media
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"></display>
 #caption
@@ -89,7 +89,7 @@ Media stacking example, requires *stacked* to be set to *true* in order to adjus
 ::Spacer
 ::
 ::Media-{caption=left}
-#image
+#media
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"> </display>
 <display alt="project image" src="/img/half_size_169.png" src-width="2000" src-height="2250"></display>
 #caption
