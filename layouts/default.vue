@@ -13,7 +13,7 @@
 			<Navigation v-else />
 		</header>
 
-		<main class="mx-auto min-h-90vh pt-48 flex flex-col items-center">
+		<main class="mx-auto min-h-90vh py-48 flex flex-col items-center">
 			<NuxtPage />
 		</main>
 

@@ -69,16 +69,16 @@ const maxWidth = computedMaxWidth(props.width);
 
 .split{
 	.lg{
-		@apply w-8/12;
+		@apply lg:w-8/12;
 	}
 	.md{
-		@apply w-7/12;
+		@apply lg:w-7/12;
 	}
 	.sm{
-		@apply w-4/12;
+		@apply lg:w-4/12;
 	}
 	.half{
-		@apply w-6/12;
+		@apply lg:w-6/12;
 	}
 }
 </style>
