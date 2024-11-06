@@ -54,6 +54,7 @@ const flexGrow = computed(() => `${props.fg}`)
 
 
 .display img {
+	opacity: 1;
 	transition: opacity .3s ease-in-out;
 }
 
@@ -63,7 +64,7 @@ const flexGrow = computed(() => `${props.fg}`)
 
 
 	img {
-		opacity: .1;
+		opacity: 0;
 	}
 }
 </style>

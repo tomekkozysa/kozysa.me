@@ -1,6 +1,6 @@
 ---
 title: "Text"
-description: "Wrap text content to align with max width, supports multiple columns"
+description: "Manage text within the layout"
 head: "Image Text | Components"
 thumbnail: /img/work/image-halfwidth.png
 order: 1
@@ -17,7 +17,15 @@ A basic implementation with default settings allows to control of the width of t
 ::Spacer
 ::
 
-::Text-{columns=2}
+```js [file.js]{4-6,7} meta-info=val
+  export default () => {
+    console.log('Code block')
+  }
+  ```
+`code inline`.
+
+
+::Text-{:columns=2}
 Text component supports multiple columns too. For longer passages it's worth considering splitting text into columns to use the available space better. Column number is reduced to a single one for smaller screens 
 
 *exact breakpoint settings to be confirmed, there's an opportunity to implement ch based component mq*
@@ -30,10 +38,10 @@ You can suggest where the text should move to a new column, just by adding a bre
 ::Text-{align=left}
 Text supports **left**, right and center alignment
 ::
-::Text-{align=right columns=1}
+::Text-{align=right :columns=1}
 Text supports left, **right** and center alignment
 ::
-::Text-{align=center columns=1}
+::Text-{align=center :columns=1}
 Text supports left, right and **center** alignment
 ::
 ::Spacer
@@ -41,10 +49,13 @@ Text supports left, right and **center** alignment
 ::Text
 Text is only a container, which means it can display 
 ## Headings, 
-[links](google.com) 
+[links](https://google.com) 
 - lists
 - of
 - things
+
+1. Also
+2. this
 
 **all of which still needs styling**
 ::
