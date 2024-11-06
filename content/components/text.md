@@ -17,13 +17,6 @@ A basic implementation with default settings allows to control of the width of t
 ::Spacer
 ::
 
-```js [file.js]{4-6,7} meta-info=val
-  export default () => {
-    console.log('Code block')
-  }
-  ```
-`code inline`.
-
 
 ::Text-{:columns=2}
 Text component supports multiple columns too. For longer passages it's worth considering splitting text into columns to use the available space better. Column number is reduced to a single one for smaller screens 
@@ -49,13 +42,31 @@ Text supports left, right and **center** alignment
 ::Text
 Text is only a container, which means it can display 
 ## Headings, 
-[links](https://google.com) 
+
 - lists
 - of
 - things
 
 1. Also
 2. this
+::
 
-**all of which still needs styling**
+::Text
+ ## Prose components 
+::
+::Spacer
+::
+::Text-{:columns=1}
+ ### Code
+
+```js [file.js]{4-6,7} meta-info=val
+  export default () => {
+    console.log('Code block')
+  }
+  ```
+::Spacer
+::
+::Text
+you can refer to code using inline code `code inline`.
+
 ::
