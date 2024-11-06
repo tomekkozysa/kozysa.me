@@ -1,14 +1,13 @@
 <template>
-    <div class="flex flex-col" :class="[stacked ? 'mb-8' : '', maxWidth]">
-        <div class="flex flex-1 flex-col space-y-8"
-            :class="[ascolumn ? '' : 'lg:flex-row lg: lg:space-y-0 lg:space-x-8']">
-
+    <figure class="media flex flex-col" :class="[stacked ? 'stacked' : '', maxWidth]">
+        <div class="flex content"
+            :class="[landscape ? 'landscape' : 'portrait']">
             <slot name="media" />
         </div>
         <Caption v-if="!stacked" :align="caption">
             <slot name="caption" />
         </Caption>
-    </div>
+    </figure>
 </template>
 <script setup>
 const props = defineProps(
@@ -23,10 +22,10 @@ const props = defineProps(
             required: false,
             default: "default"
         },
-        ascolumn: {
+        landscape: {
             type: Boolean,
-            required: false,
-            default: false
+            default: true,
+            required: false
         },
         stacked: {
             type: Boolean,
@@ -37,4 +36,3 @@ const props = defineProps(
 
 const maxWidth = computedMaxWidth(props.width);
 </script>
-<style scoped></style>

@@ -18,7 +18,7 @@
 		</main>
 
 	</div>
-	<footer class="py-32 text-white bg-black min-h-64">Footer</footer>
+	<footer class="flex min-h-24 text-white bg-black min-h-64 items-start"></footer>
 </template>
 <script setup>
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'

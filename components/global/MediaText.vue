@@ -1,17 +1,17 @@
 <template>
-	<div class="lg:flex w-full lg:items-center mediatext" :class="[
-		reverse ? 'lg:flex-row-reverse justify-start' : '',
-		flexible ? '' : 'split',
+	<div class="mediatext" :class="[
+		reverse ? 'reverse justify-start' : '',
+		flexible ? 'flexible' : 'split',
 		maxWidth,
 	]">
-		<div class="flex flex-col media" :class="[
-		column ? 'flex-col space-y-8' : 'lg:space-x-8 space-y-8 lg:space-y-0 lg:flex-row', size
+		<div class="media flex flex-col" 
+		:class="[ landscape ? 'landscape' : 'portrait', size
 	]">
 			<slot name="media" />
 		</div>
 		<div class="text" :class="[
-		textAlign == 'bottom' ? 'self-end' : textAlign == 'top' ? 'self-start' : '',
-		reverse ? 'lg:pr-8' : 'lg:pl-8',
+		textAlign == 'bottom' ? 'bottom' : textAlign == 'top' ? 'top' : '',
+		reverse ? 'reverse' : '',
 	]">
 			<div class="max-w-ch">
 				<slot name="text" />
@@ -27,7 +27,7 @@ const props = defineProps({
 		default: false,
 		required: false
 	},
-	column: {
+	landscape: {
 		type: Boolean,
 		default: false,
 		required: false
@@ -56,29 +56,3 @@ const props = defineProps({
 const maxWidth = computedMaxWidth(props.width);
 
 </script>
-<style scoped >
-.media {
-	/* width: v-bind(mediaWidth); */
-	width: fit-content;
-}
-
-.text {
-	width: fit-content;
-	flex-shrink: 1;
-}
-
-.split{
-	.lg{
-		@apply lg:w-8/12;
-	}
-	.md{
-		@apply lg:w-7/12;
-	}
-	.sm{
-		@apply lg:w-4/12;
-	}
-	.half{
-		@apply lg:w-6/12;
-	}
-}
-</style>

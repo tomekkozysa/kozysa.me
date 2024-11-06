@@ -1,5 +1,5 @@
 <template>
-	<div class="text flex flex-col w-full" :class="[align == 'right' ? 'text-end' : align == 'center' ? 'text-center' : 'text-start',
+	<div class="text w-full" :class="[align == 'right' ? 'text-end' : align == 'center' ? 'text-center' : 'text-start',
 		maxWidth]">
 		<div :class="[columns]">
 			<slot />
