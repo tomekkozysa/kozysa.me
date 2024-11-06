@@ -28,6 +28,13 @@
 	.content a {
 		text-decoration: underline
 	}
+	.content p code{
+		@apply text-sm border-2 px-1 rounded border-blue-200  text-blue-900;
+		border-width: 1px;
+	}
+	.content p{
+		@apply self-start;
+	}
 	.content ol {
 		list-style: decimal
 	}
@@ -35,7 +42,7 @@
 		list-style: disc
 	}
 	pre{
-		@apply max-w-6xl self-start px-4 py-4 text-sm;
+		@apply max-w-6xl self-start px-4 py-4 text-sm bg-white w-full;
 	}
 }
 
@@ -141,5 +148,10 @@
 	}
 	.caption.right{
 		@apply md:self-end md:text-right md:border-r-4 md:pr-2
+	}
+
+
+	ul.tags{
+		list-style: none;
 	}
 }

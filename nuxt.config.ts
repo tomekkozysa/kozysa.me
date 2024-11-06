@@ -113,7 +113,13 @@ export default defineNuxtConfig({
 		// 	// Theme used if `html.sepia`
 		// 	sepia: 'monokai'
 		//   }
-		}
+		},
+		markdown:{
+			anchorLinks:false,
+			mdc:true,
+		},
 	  },
+	  
+
 	compatibilityDate: "2024-10-22",
 });
