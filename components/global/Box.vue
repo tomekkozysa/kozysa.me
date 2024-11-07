@@ -1,15 +1,17 @@
 <template>
-    <div class="relative" @mouseover="showScrollTag = false" @mouseout="showScrollTag = true">
-        <div class="box" :class="[hideScrollbar ? 'hide-scrollbar' : '']">
-            <slot></slot>
+    <div class="relative">
+        <div class="box" :class="[hideScrollbar ? 'hide-scrollbar' : '']" ref="boxelement">
+            <div ref="scrollcontent">
+                <slot></slot>
+            </div>
         </div>
-        <div class="scroll-info w-full text-center text-sm absolute bottom-2" :class="[showScrollTag ? 'show' : '']">
+        <div v-if="doesItScroll" class="scroll-info w-full text-center text-sm absolute bottom-2" :class="[showScrollTag ? 'show' : '']">
             Scroll content
         </div>
     </div>
 </template>
 <script setup>
-const showScrollTag = ref(true)
+
 const props = defineProps({
     width: {
         type: String,
@@ -68,7 +70,18 @@ const props = defineProps({
     },
 });
 
-const flexGrow = computed(() => `${props.grow}`)
+const scrollcontent = ref(false)
+const boxelement = ref(false)
+const showScrollTag = ref(true)
+const doesItScroll = computed(()=>(props.overflowY === 'auto' && isBigger.value )|| (props.overflowY === 'scroll' && isBigger.value))
+const isBigger = computed(()=>{
+    if(boxelement.value && scrollcontent.value){
+        const content = scrollcontent.value.getBoundingClientRect().height
+        const box = boxelement.value.getBoundingClientRect().height
+        return content > box
+    }
+    return false
+})
 
 </script>
 <style scoped>
@@ -82,8 +95,8 @@ const flexGrow = computed(() => `${props.grow}`)
     min-height: v-bind(minHeight);
     overflow-x: v-bind(overflowX);
     overflow-y: v-bind(overflowY);
-
     aspect-ratio: v-bind(aspectRatio);
+    
 }
 
 .hide-scrollbar {

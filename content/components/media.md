@@ -11,7 +11,7 @@ online: true
 There are different ways of using columns component, they work great for multi image content that requires a short label
 
 ::
-::Spacer
+::Spacer-{size=sm}
 ::
 ::Media
 #media

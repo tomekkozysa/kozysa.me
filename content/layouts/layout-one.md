@@ -86,13 +86,13 @@ Use text to explain objectives, hurdles or achievements, capped with box compone
 
 ::Media-{caption=right width=wide}
 #media
-<box width=100% max-width=425px height="650px" max-height=650px>
+<box width=100% max-width=425px height=650px max-height=650px>
     <display alt="project image" src="/img/long_9x32.png" :src-width= 1125 :src-height=4000> </display>
 </box>
-<box width=100% max-width=425px height="650px" max-height=650px>
+<box width=100% max-width=425px height=650px max-height=650px>
     <display alt="project image" src="/img/long_9x32.png" :src-width= 1125 :src-height=4000> </display>
 </box>
-<box width=100% max-width=425px height="650px" max-height=650px>
+<box width=100% max-width=425px height=650px max-height=650px>
     <display alt="project image" src="/img/long_9x32.png" :src-width= 1125 :src-height=4000> </display>
 </box>
 #caption

@@ -9,9 +9,9 @@ export default defineNuxtConfig({
 		// "@tailwindcss/typography",
 	],
 
-	// plugins: [
-	// 	{ src: "@/plugins/vue-dragandscroll", ssr: false, mode: "client" },
-	// ],
+	plugins: [
+		{ src: "@/plugins/vue-dragandscroll", ssr: false, mode: "client" },
+	],
 	target: "static",
 
 	app: {

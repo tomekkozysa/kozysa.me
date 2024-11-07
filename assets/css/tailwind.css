@@ -24,7 +24,17 @@
 		@apply text-xl;
 	}
 
-	
+	.page .intro{}
+	.page .intro .title{}
+	.page .intro .description{
+		@apply mt-4;
+	}
+
+	.page .content{
+		@apply mt-4
+	}
+
+
 	.content a {
 		text-decoration: underline
 	}
@@ -41,9 +51,25 @@
 	.content ul {
 		list-style: disc
 	}
-	pre{
+	.content pre{
 		@apply max-w-6xl self-start px-4 py-4 text-sm bg-white w-full;
 	}
+
+	.navigation-toggle .bar {
+		@apply text-blue-900;
+		
+	}
+
+	.slug-intro{}
+	.slug-content{
+		@apply mt-16;
+	}
+	.slug-link{}
+	.slug-link-title{}
+	.slug-link-description{
+		@apply mt-4 text-base;
+	}
+	
 }
 
 @layer components {
@@ -137,7 +163,7 @@
 
 
 	.caption{
-		@apply mt-2 border-black
+		@apply mt-2 border-blue-900 text-base italic
 		
 	}
 	.caption.noborder{
@@ -150,8 +176,33 @@
 		@apply md:self-end md:text-right md:border-r-4 md:pr-2
 	}
 
-
 	ul.tags{
 		list-style: none;
+	}
+	.header{
+		@apply py-4 px-8;
+	}
+	.page{
+		@apply px-8 py-48;
+	}
+	.footer{
+		@apply px-8 min-h-24 text-white bg-black min-h-64;
+	}
+
+
+
+}
+
+
+@layer utilities{
+
+	.spacer {
+		@apply my-4 lg:my-8;
+	}
+	.spacer.md {
+		@apply my-2 lg:my-4;
+	}
+	.spacer.sm {
+		@apply my-1 lg:my-2;
 	}
 }

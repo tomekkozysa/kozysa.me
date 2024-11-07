@@ -2,14 +2,14 @@
 
 
 	<ContentQuery :path="$route.path" find="one" v-slot="{ data }">
-		<section class="flex flex-col items-center w-full">
-			<div class="w-full" :class="maxWidth">
-				<h2>{{ data.title }}</h2>
+		<section class="intro w-full" :class="maxWidth">
+			<div>
+				<h2 class="title">{{ data.title }}</h2>
 			</div>
 		</section>
-		<div class="w-full">
-			<ContentRenderer :value="data" class="flex flex-col items-center" />
-		</div>
+		<section>
+			<ContentRenderer :value="data" class="content w-full flex flex-col items-center justify-start" />
+		</section>
 	</ContentQuery>
 
 
