@@ -15,7 +15,6 @@
 		"nuxt": "^3.1.2"
 	},
 	"dependencies": {
-		"@tailwindcss/typography": "^0.5.9",
-		"vue-dragscroll": "^4.0.5"
+		"@tailwindcss/typography": "^0.5.9"
 	}
 }
