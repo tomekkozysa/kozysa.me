@@ -7,18 +7,20 @@ const projectsByOrder = projects.sort((a, b) => {
 	return sorted
 });
 
-const filtered = projectsByOrder.filter(p => !p._file.includes('index.md'))
+const filtered = projectsByOrder.filter(p => !p._file.includes('index.md') && p.online)
 const maxWidth = computedMaxWidth("default");
 
 </script>
 <template>
-	<div class="slug-intro w-full" :class="[maxWidth]">
-		<ContentDoc :path="`/components/`" v-slot="{ doc }" class="w-full flex flex-col items-center justify-start"/>
-	</div>	
-	<div v-for="(project, index) in filtered" class="slug-content w-full" :class="[maxWidth]">
-		<NuxtLink v-if="project.online" :to="project._path" class="slug-link">
-			<h2 class="slug-link-title">{{ project.title }}</h2>
-			<span class="slug-link-description">{{ project.description }}</span>
+	<section class="intro w-full" :class="[maxWidth]">
+		<ContentDoc :path="`/layouts/`" v-slot="{ doc }" class="w-full flex flex-col items-center justify-start"/>
+	</section>	
+	<section class="content w-full" :class="[maxWidth]">	
+	<div v-for="(project, index) in filtered">
+		<NuxtLink :to="project._path" class="page-link">
+			<h3 class="page-link-title">{{ project.title }}</h3>
+			<span class="page-link-description">{{ project.description }}</span>
 		</NuxtLink>
 	</div>
+	</section>
 </template>

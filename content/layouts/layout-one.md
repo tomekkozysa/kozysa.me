@@ -9,12 +9,6 @@ online: true
 
 ::Text-{:columns=1}
 ::
-::Tags-{:list='["Tag one","Tag two","Tag three","Tag four"]'}
-::
-
-::Spacer-{size= md}
-::
-
 ::Text-{:columns= 2}
 Introduction text sets the scene for the project story. What was the starting point, the problem? What issue were you trying to solve? What kind of task was set, how was it applied and to what result?
 This story can be told and assisted with set of images, slides further down or here in the intro text. It looks alright split into two columns and I think it's fairy understandable how to read that.

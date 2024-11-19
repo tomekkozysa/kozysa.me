@@ -6,20 +6,6 @@ thumbnail: /img/work/image-halfwidth.png
 order: 1
 online: true
 ---
-::Spacer-{size=sm}
-::
-
-::Tags-{:list='["Tag 1","Tag 2","Tag 3"]'}
-::
-
-::Spacer-{size=sm}
-::
-
-
-
-
-
-
 ::MediaText
 #media
 <display src="/img/half_size_169.png" :src-width=2000 :src-height=2250> </display>
@@ -69,3 +55,4 @@ MediaText component reversed, set to wide
 ::
 ::Spacer
 ::
+

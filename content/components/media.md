@@ -7,11 +7,15 @@ order: 3
 online: true
 ---
 
-::Text-{:columns=2}
+::Text-{}
 There are different ways of using columns component, they work great for multi image content that requires a short label
 
+Here are some properties:
+
+- width _narrow, wide, full_
+- caption _left, right_
 ::
-::Spacer-{size=sm}
+::Spacer
 ::
 ::Media
 #media
@@ -82,7 +86,6 @@ Media stacking example, requires *stacked* to be set to *true* in order to adjus
 <display alt="project image" src="/img/half_size_169.png" :src-width=2000 :src-height=2250> </display>
 <display alt="project image" src="/img/half_size_169.png" :src-width=2000 :src-height=2250></display>
 #caption
-
 [link example](https://google.com)
 ::
 
@@ -93,6 +96,7 @@ Media stacking example, requires *stacked* to be set to *true* in order to adjus
 <display alt="project image" src="/img/half_size_169.png" :src-width=2000 :src-height=2250> </display>
 <display alt="project image" src="/img/half_size_169.png" :src-width=2000 :src-height=2250></display>
 #caption
+
 multiple columns example
 [link example](https://google.com)
 ::

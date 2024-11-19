@@ -13,13 +13,11 @@
 
 			<Navigation v-else />
 		</header>
-
-		<main class="page mx-auto min-h-90vh flex flex-col items-center">
+		<main class="page mx-auto min-h-90vh flex flex-col items-center" :class="$route.name">
 			<NuxtPage />
 		</main>
 
-	
-	<footer class="footer flex items-start"></footer>
+		<FooterStrip />
 </template>
 <script setup>
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'

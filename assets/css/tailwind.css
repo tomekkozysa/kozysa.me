@@ -8,7 +8,7 @@
 	}
 	body {
 		
-		@apply bg-stone-50 text-blue-900 text-lg;	
+		@apply bg-stone-50 text-blue-900 text-base;	
 	}
 
 	h1 {
@@ -24,31 +24,57 @@
 		@apply text-xl;
 	}
 
+
+	.page{
+		@apply px-8 py-48;
+	}
+	.page.index{
+		@apply pt-8;
+	}
 	.page .intro{}
+	/*
+	
+		below could be  p:first-child too, this value should be the same as mt fr description below:
+	
+	*/
+	.page .intro p{
+		@apply mt-2
+	}
 	.page .intro .title{}
 	.page .intro .description{
-		@apply mt-4;
+		@apply mt-2;
 	}
 
 	.page .content{
-		@apply mt-4
+		@apply mt-8 gap-y-8
 	}
 
 
 	.content a {
 		text-decoration: underline
 	}
+
+
+	.content .page-link .page-link-description{
+		@apply text-base;
+	}
+
+	.content p{
+		@apply self-start mt-4;
+	}
+	.content p:first-child{
+		@apply mt-0;
+	}
 	.content p code{
 		@apply text-sm border-2 px-1 rounded border-blue-200  text-blue-900;
 		border-width: 1px;
 	}
-	.content p{
-		@apply self-start;
-	}
 	.content ol {
+		@apply mt-4;
 		list-style: decimal
 	}
 	.content ul {
+		@apply mt-4;
 		list-style: disc
 	}
 	.content pre{
@@ -60,14 +86,45 @@
 		
 	}
 
-	.slug-intro{}
-	.slug-content{
-		@apply mt-16;
+	.navigation{}
+	.navigation-list{}
+	.navigation-link{}
+	.navigation-link:hover{
+		text-decoration: underline
 	}
-	.slug-link{}
-	.slug-link-title{}
-	.slug-link-description{
-		@apply mt-4 text-base;
+
+	.content a.page-link{
+		@apply mt-8 block;
+		text-decoration: none;
+		--arrow-opacity:0;
+		--arrow-shift:-30px;
+		--title-shift:10px;
+	}
+	.content a.page-link .page-link-title{
+		@apply relative;
+		transition: transform .3s;
+	}
+	.content a.page-link:hover {
+		--arrow-opacity:1;
+	}
+	.content a.page-link:hover .page-link-title{
+		transform: translateX(var(--title-shift));
+	}
+	
+	.content a.page-link .page-link-title{
+		@apply relative;
+	}
+
+	a.page-link .page-link-title:before{
+		
+		position:absolute;
+		display: block;
+		content:'→';	
+		left:0;
+		top:0;
+		transform: translateX(var(--arrow-shift));
+		opacity:var(--arrow-opacity);
+		transition: opacity .1s;	
 	}
 	
 }
@@ -81,9 +138,7 @@
 	}
 
 	.card{
-		/* @apply px-4 py-4 bg-white; */
-		
-		
+		@apply mt-8 px-4 py-4 bg-white;			
 	}
 	.card.portrait{
 		@apply space-y-4;
@@ -108,10 +163,10 @@
 	.media.stacked{
 		@apply mb-8;
 	}
-	.media .content.portrait{
+	.media .media-content.portrait{
 		@apply lg:space-y-8 lg:flex-col;
 	}
-	.media .content.landscape{
+	.media .media-content.landscape{
 		@apply space-y-8 flex-col md:flex-row md:space-y-0 md:space-x-8;
 	}
 	
@@ -131,15 +186,15 @@
 		@apply flex-col space-y-8;
 	}
 	.mediatext .media.portrait{
-		@apply lg:space-x-8 space-y-8 lg:space-y-0 lg:flex-row;
+		@apply md:space-x-8 space-y-8 md:space-y-0 md:flex-row;
 	}
 	.mediatext .text{
 		width: fit-content;
 		flex-shrink: 1;
-		@apply lg:pl-8
+		@apply md:pl-8 mt-2 md:mt-0;
 	}
 	.mediatext .reverse{
-		@apply lg:pr-8
+		@apply md:pr-8
 	}
 	.mediatext .text.bottom{
 		@apply self-end;
@@ -162,6 +217,9 @@
 	}
 
 
+	.caption p{
+		@apply mt-0
+	}
 	.caption{
 		@apply mt-2 border-blue-900 text-base italic
 		
@@ -182,11 +240,9 @@
 	.header{
 		@apply py-4 px-8;
 	}
-	.page{
-		@apply px-8 py-48;
-	}
+	
 	.footer{
-		@apply px-8 min-h-24 text-white bg-black min-h-64;
+		@apply px-8 py-4 min-h-24 text-white bg-blue-900 min-h-64;
 	}
 
 
@@ -197,12 +253,37 @@
 @layer utilities{
 
 	.spacer {
-		@apply my-4 lg:my-8;
+		@apply block min-h-16 bg-transparent w-full;
 	}
 	.spacer.md {
-		@apply my-2 lg:my-4;
+		@apply min-h-8;
 	}
 	.spacer.sm {
-		@apply my-1 lg:my-2;
+		@apply min-h-16;
+	}
+
+	.scroll-info-content{
+		@apply block mx-auto bg-white w-12 h-6 text-sm h-6 ;
+		border-radius:10px 10px 0 0;
+		line-height: 1.5rem; 
+	}
+	.scroll-info{
+		text-align: center;
+	}
+	/* widths moved from a composable */
+	.max-w{
+		@apply max-w-6xl;
+	}
+	.max-narrow{
+		@apply max-w-3xl;
+	}
+	.max-wide{
+		@apply max-w-8xl;
+	}
+	.max-full{
+		@apply max-w-full;
+	}
+	.max-fit{
+		@apply max-w-fit;
 	}
 }

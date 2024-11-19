@@ -1,5 +1,5 @@
 export default function computedMaxWidth(width) {
-	const default_max_width =  "max-w-6xl"
+	const default_max_width =  "max-w"
 	return computed(() => {
 		/* could/should be?:
 		- full
@@ -9,18 +9,18 @@ export default function computedMaxWidth(width) {
 		- sm
 		*/
 		if (width == "full") {
-			return "max-w-full";
+			return "max-full";
 		} else if (width == "narrow") {
-			return "max-w-3xl";
+			return "max-narrow";
 		} else if (width == "wide") {
-			return "max-w-8xl";
+			return "max-wide";
 		} else if (width == "fit") {
-			return "w-fit";		
+			return "max-fit";		
 		} else if (width == "auto") {
 			return "";
 		} 
 		else if (width == "default") {
-			return default_max_width;
+			return "max-w";
 		} 
 		return default_max_width;
 	});

@@ -1,6 +1,6 @@
 <template>
     <figure class="media flex flex-col" :class="[stacked ? 'stacked' : '', maxWidth]">
-        <div class="flex content"
+        <div class="flex media-content"
             :class="[landscape ? 'landscape' : 'portrait']">
             <slot name="media" />
         </div>

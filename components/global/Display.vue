@@ -1,7 +1,11 @@
 <template>
 	<div class="display w-full" :class="[is_loading ? 'is_loading' : '']">
 		<nuxt-img ref="image" 
-		:src="imageSource" :alt="alt" :placeholder="placeholder" lazy :width="srcWidth"
+			:src="imageSource" 
+			:alt="alt" 
+			:placeholder="placeholder" 
+			lazy :width="srcWidth"
+			placeholder-class="placeholder"
 			:quality="90" :height="srcHeight" sizes="sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw 2xl:100vw" format="webp"
 			@load="onImageLoaded" />
 	</div>
@@ -27,12 +31,14 @@ const props = defineProps({
 	},
 });
 
+const emit = defineEmits(['loaded'])
 
 const img = useImage()
 const is_loading = ref(true)
 
 const onImageLoaded = () => {
 	is_loading.value = false
+	emit('loaded')
 }
 const imageSource = computed(() => {
 	if (props.src !== null)

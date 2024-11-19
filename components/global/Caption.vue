@@ -2,7 +2,7 @@
 	<figcaption 
 		class="caption max-w-ch flex-0"
 		:class="[align, noborder ? 'noborder' : '']">
-		<ContentSlot :use="$slots.default" unwrap="p" />
+			<ContentSlot :use="$slots.default" unwrap="p" />
 	</figcaption>
 </template>
 <script setup>

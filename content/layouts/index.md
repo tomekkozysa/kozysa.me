@@ -1,7 +1,7 @@
 ---
-title: "Base components"
-description: "List of basic components available in this starter"
-head: "Components"
+title: "Example layouts"
+description: "Some layouts available as examples"
+head: "Layouts"
 thumbnail: /img/work/image-halfwidth.png
 ---
 

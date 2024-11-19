@@ -4,8 +4,6 @@ description: "Wrap text content to align with max width, supports multiple colum
 head: "About"
 thumbnail: /img/work/image-halfwidth.png
 ---
-::Spacer
-::
 ::Text-{:columns=2}
 
 I’m a freelance Interaction Designer with over 15 years of experience in the field of digital design. My professional experience is based in the creative environment, I have worked in media creative and advertising sectors.
