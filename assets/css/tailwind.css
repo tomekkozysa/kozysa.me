@@ -94,7 +94,7 @@
 	}
 
 	.content a.page-link{
-		@apply mt-8 block;
+		@apply mt-4 block;
 		text-decoration: none;
 		--arrow-opacity:0;
 		--arrow-shift:-30px;
@@ -159,7 +159,9 @@
 			min-width:300px;			
 		}
 	}
-
+	.media {
+		@apply w-full
+	}
 	.media.stacked{
 		@apply mb-8;
 	}
@@ -221,7 +223,7 @@
 		@apply mt-0
 	}
 	.caption{
-		@apply mt-2 border-blue-900 text-base italic
+		@apply mt-2 border-blue-900 text-base
 		
 	}
 	.caption.noborder{

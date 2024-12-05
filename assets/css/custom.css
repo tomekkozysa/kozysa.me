@@ -1,0 +1,9 @@
+.home-hero{
+	min-height: 80vh;
+}
+.home-hero .media{
+    @apply mx-auto;
+}
+.home-hero .text{
+    @apply mt-8 mx-auto;
+}
