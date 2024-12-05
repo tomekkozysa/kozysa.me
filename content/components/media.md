@@ -3,7 +3,7 @@ title: "Media"
 description: "Best for images with short descriptions"
 head: "Media | Components"
 thumbnail: /img/work/image-halfwidth.png
-order: 3
+order: 2
 online: true
 ---
 
