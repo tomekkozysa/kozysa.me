@@ -2,10 +2,7 @@
 	<nav class="w-full navigation-panel">
 		<ul class="flex justify-end w-full text-xl text-left navigation-list gap-x-4">
 			<li>
-				<NuxtLink to="/components" class="navigation-link">Components</NuxtLink>
-			</li>
-			<li>
-				<NuxtLink to="/layouts" class="navigation-link">Layouts</NuxtLink>
+				<NuxtLink to="/work" class="navigation-link">Work</NuxtLink>
 			</li>
 			<li>
 				<NuxtLink to="/about" class="navigation-link">About</NuxtLink>

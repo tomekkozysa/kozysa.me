@@ -12,12 +12,16 @@ const maxWidth = computedMaxWidth("default");
 
 </script>
 <template>
-	<div class="slug-intro w-full" :class="[maxWidth]">
-		<ContentDoc :path="`/components/`" v-slot="{ doc }" class="w-full"/>
+	<div class="intro w-full" :class="[maxWidth]">
+		<ContentDoc :path="`/work/`" v-slot="{ doc }" class="w-full"/>
 	</div>	
-	<div v-for="(project, index) in filtered" class="slug-content w-full" :class="[maxWidth]">
-		<card :title="project.title" :image="project.thumbnail" 
-	:description="project.description" :link="project._path"/>
+	<div v-for="(project, index) in filtered" class="content w-full" :class="[maxWidth]">
+		<!-- <card :title="project.title" :image="project.thumbnail" 
+	:description="project.description" :link="project._path"/> -->
+		<NuxtLink :to="project._path" class="page-link">
+			<h3 class="page-link-title">{{ project.title }}</h3>
+			<span class="page-link-description">{{ project.description }}</span>
+		</NuxtLink>
 	</div>
 </template>
 

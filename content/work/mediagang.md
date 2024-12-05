@@ -1,30 +1,27 @@
 ---
-title: "mediagnang – Routes PWA"
+title: "Mediagang – Routes PWA"
 description: "Realtime delivery tracking app"
 head: "something for the head"
-thumbnail: /img/work/image-halfwidth.png
-order: 8
+thumbnail: /img/work/full_size_169.png
+order: 2
 online: true
 ---
 
-::Tags-{:list='["vue.js/nuxt","vuetify","Google Maps API","Firebase"]'}
+::Tags-{:list='["Vue.js/Nuxt","Vuetify","Google Maps API","Firebase"]'}
 ::
 ::Spacer-{size=sm}
 ::
-::Text
+::MediaText
+#text
+I produced a Progressive Web Application for real-time delivery tracking. It was built to support a guerrilla marketing campaign with multiple assets to be installed over one weekend across the UK. 
 
-Progressive Web Application designed and developed to track marketing assets delivery in real time, build to support a guerrilla marketing campaign which required multiple assets to be installed over one weekend across UK. Application design was based on two use cases. Admin user with access to all routes and realtime updates on the delivery progress as well as ability do create and assign routes to drivers. Drivers on the other hand had access to routes assigned to them and were providing updates at each completed delivery.
+Used by drivers and managers, the application gave real-time insight into production progress.
+It was crucial that the application was responsive and worked across various mobile devices.
 
-::
-::Spacer
-::
-
-::Media
 #media
-<display alt="project image" src="/img/work/mediagang/map.png">
-#caption
-All of the UK cities where the campaign took place
+<display alt="project image" src="/img/work/mediagang/map-portrait.png">
 ::
+
 ::Spacer
 ::
 
@@ -32,7 +29,7 @@ All of the UK cities where the campaign took place
 #media
 <display alt="project image" src="/img/work/mediagang/city-view-desktop.png">
 #text
-Each route consisted of seven deliveries, completing each one of them meant the route has been fully delivered
+Each route consisted of seven deliveries, all seven needed to be completed before the route was fully delivered, closing the green progress circle.
 ::
 ::Spacer
 ::
@@ -40,20 +37,27 @@ Each route consisted of seven deliveries, completing each one of them meant the 
 ::MediaText-{text=bottom}
 #media
 <display alt="project image" src="/img/work/mediagang/campaign-view-desktop.png">
-#caption
-I used Google Firebase to provide realtime updates provided insight into the campagin delivery progress, Google Cloud Storage provided a platform for uploaded assets such as delivery proofs. Visual design adopted Vuetify library based on Google Material.
+#text
+I used the Vuetify UI library for the components and the visual language. It helped streamline the build and provided a consistent user experience.
+Google Firebase API provided real-time synchronisation and user authentication. 
+
+
 ::
 ::Spacer
 ::
 
-::MediaText-{reverse width=wide}
+::Media
 #media
-<mobile image="/img/work/mediagang/campaign-view-mobile.png" class="w-[320px]"> </mobile>
-<mobile image="/img/work/mediagang/city-view-mobile.png" class="w-[320px]"> </mobile>
-<mobile image="/img/work/mediagang/location-view-mobile.png" class="w-[320px]"> </mobile>
+<box width=100% max-width=400px height=650px max-height=650px>
+    <display src="/img/work/mediagang/campaign-view-mobile.png" > </display>
+</box>
+<box width=100% max-width=400px height=650px max-height=650px>
+    <display src="/img/work/mediagang/city-view-mobile.png" > </display>
+</box>
+<box width=100% max-width=400px height=650px max-height=650px>
+    <display src="/img/work/mediagang/location-view-mobile.png" > </display>
+</box>
 #caption
+Since the first campaign, the application has been fully adopted and become a crucial tool in Media Gang planning and production of their Guilerra marketing campaigns.
 
-<p class="mt-8">
-Since the first campaign, the application has been fully adopted by the agency and become a crucial tool in the planning and production of their guilerra marketing campaigns.
-</p>
 ::

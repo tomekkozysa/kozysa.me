@@ -1,11 +1,11 @@
 ---
-title: "Base components"
-description: "List of basic components available in this starter"
+title: "Work"
+description: "Professional projects delivered for variety of clients"
 head: "Components"
 thumbnail: /img/work/image-halfwidth.png
 ---
 
 ::Text
-# Work projects
-This is a basic set of components along with demo pages
+# Work
+These are project delivered in the last fifteen years 
 ::
