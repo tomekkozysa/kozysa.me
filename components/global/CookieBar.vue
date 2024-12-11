@@ -18,9 +18,14 @@ const analyticsCookie = useCookie('analyticsCookie')
 const hasAccepted = computed(()=>analyticsCookie.value)
 const gtag = useGtag()
 
+onMounted(()=>{
+    if(analyticsCookie.value){
+        useTrackEvent('page_view')
+    }
+})
 const acceptCookies = ()=>{
-    // analyticsCookie.value = true
-    console.log('no cookies for now')
+    analyticsCookie.value = true
+    useTrackEvent('page_view')
     gtag.gtag('consent','update',{
         'analytics_storage':'granted',
         'wait_for_update':500
