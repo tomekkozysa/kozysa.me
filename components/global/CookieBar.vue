@@ -1,6 +1,6 @@
 <template>
     <div class="cookie-bar py-4 px-8 mb-4">
-        🍪 Hi, I use Google Analytics to know how my website is performing, hope that's ok
+        Hi, I use Google Analytics to know how my website is performing, hope that's ok
         <span class="cookie-bar-action" @click="acceptCookies">
             Yes it's fine
         </span>
@@ -8,9 +8,7 @@
             Please don't do it
         </span>
     </div>
-    <div v-if="hasAccepted" >Cookied 🍪 
-    
-    </div>
+    <div v-if="hasAccepted" >🍪 </div>
 </template>
 <script setup>
 
@@ -20,12 +18,14 @@ const gtag = useGtag()
 
 onMounted(()=>{
     if(analyticsCookie.value){
-        useTrackEvent('page_view')
+        // useTrackEvent('page_view')
+        gtag.gtag('consent','default',{
+            'analytics_storage':'granted',
+        })
     }
 })
 const acceptCookies = ()=>{
     analyticsCookie.value = true
-    useTrackEvent('page_view')
     gtag.gtag('consent','update',{
         'analytics_storage':'granted',
         'wait_for_update':500
