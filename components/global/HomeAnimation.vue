@@ -1,6 +1,6 @@
 <template>
-    <svg class="anim is_loading" width="300px" height="450px" viewBox="0 0 300 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">      
-        <g id="drawthis" class="is_loading">
+    <svg class="anim" :class="{is_loading}" width="300px" height="450px" viewBox="0 0 300 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">      
+        <g id="drawthis" :class="{is_loading}">
             <rect class="strk"  x="8.00346021" y="7" width="286" height="71"></rect>
             <rect class="strk"  x="7" y="372" width="286" height="68.1981424"></rect>
             <rect class="strk" x="8.00346021" y="92" width="71" height="266"></rect>
@@ -36,9 +36,9 @@ useHead({
 });
 
 
-
 const svgNS = "http://www.w3.org/2000/svg";
 const in_drawing_mode = ref(false);
+const is_loading = ref(true)
 
 const getLength = (item) => {
   if (item.nodeName == "rect") {
@@ -91,8 +91,6 @@ const pencilRest = () => {
     translateX: 280,
     translateY: 455,
     rotate: -22.5,
-    // easing: 'easeInQuad',
-    // elasticity:5000,
     duration: 300,
   });
 };
@@ -102,8 +100,6 @@ const pencilRollIn = () => {
     targets: "#pencil",
     translateX: 280,
     translateY: 455,
-    // rotate: 360-22.5,
-    // easing: 'easeOutQuad',
     elasticity: 100,
     duration: 700,
     complete: pencilRest,
@@ -198,11 +194,14 @@ onMounted(()=>{
     }
   });
 
+
   setTimeout(() => {
     if (!in_drawing_mode.value) {
       draw(collection, drop);
     }
   }, 3000);
+
+  is_loading.value = false
 }
 );
 
@@ -213,6 +212,9 @@ onMounted(()=>{
 
 </script>
 <style>
+.is_loading{
+    opacity:.5
+}
 .anim {
     overflow: visible;
 }
@@ -221,7 +223,7 @@ onMounted(()=>{
 }
 .strk{
 stroke-width:3;
-stroke:#1E3A8A;
+stroke:rgb(31, 41, 55);
 fill:none;
 }
 .pencil-body{

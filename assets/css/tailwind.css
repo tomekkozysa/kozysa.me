@@ -8,7 +8,7 @@
 	}
 	body {
 		
-		@apply bg-stone-50 text-blue-900 text-base;	
+		@apply bg-stone-50 text-gray-800 text-base;	
 	}
 
 	h1 {
@@ -244,7 +244,7 @@
 	}
 	
 	.footer{
-		@apply px-8 py-4 min-h-24 text-white bg-blue-900 min-h-64;
+		@apply px-8 py-4 min-h-24 text-white bg-gray-800 min-h-64;
 	}
 
 

@@ -6,11 +6,23 @@ thumbnail: /img/work/image-halfwidth.png
 ---
 ::Text-{:columns=2}
 
-I’m a freelance Interaction Designer with over 15 years of experience in the field of digital design. My professional experience is based in the creative environment, I have worked in media creative and advertising sectors.
 
-I’m passionate about clean design and efficient code. I explore the similarities in between both disciplines which enables me to independently build prototypes and minimal viable products and test ideas and assumptions in the native environment. It also drives my interests in systems and systems theory.
+Hello, Tomasz here. Thanks for visiting! 
 
-I keep a tumblr blog on various systems at system-thinking.tumblr.com
+I live and work in London. By trade, I'm a web developer. I build websites and applications using standard web technologies, and by night, I play music or... write more code. 
+
+This is the fifth iteration of my portfolio, and this version includes more independent projects and explorations from the past years. 
+
+The Work section focuses on commercial projects and showcases the important milestones in my development or, in the case of the older projects,  a development of the processes still applicable Today. 
+
+The Experiments section is where I publish self-initiated projects, which I use to explore applications of web technologies. I like building apps with Vue.js but often use just vanilla stack to craft the exact tool for a specific job.
+ 
+
+I'm always on the lookout for new opportunities and projects, get in touch if you need help with your website.
+
+Other links:
+
+
 ::
 
 ::Spacer-{size=sm}
