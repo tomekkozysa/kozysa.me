@@ -66,7 +66,7 @@
 		@apply mt-0;
 	}
 	.content p code{
-		@apply text-sm border-2 px-1 rounded border-blue-200  text-blue-900;
+		@apply text-sm border-2 px-1 rounded border-blue-200  text-gray-800;
 		border-width: 1px;
 	}
 	.content ol {
@@ -82,7 +82,7 @@
 	}
 
 	.navigation-toggle .bar {
-		@apply text-blue-900;
+		@apply text-gray-800;
 		
 	}
 
@@ -223,7 +223,7 @@
 		@apply mt-0
 	}
 	.caption{
-		@apply mt-2 border-blue-900 text-base
+		@apply mt-2 border-gray-800 text-base
 		
 	}
 	.caption.noborder{
