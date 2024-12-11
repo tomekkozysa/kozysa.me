@@ -6,8 +6,18 @@ export default defineNuxtConfig({
 		"@nuxt/content",
 		"@nuxt/image-edge",
 		"@vueuse/nuxt",
+		"nuxt-gtag"
 		// "@tailwindcss/typography",
 	],
+	gtag:{
+		id:'G-SD2TPL0JPX',
+		initCommands: [
+			['consent', 'default', {
+			  analytics_storage: 'denied',
+			  wait_for_update: 500,
+			}]
+		]
+	},
 
 	plugins: [],
 	target: "static",
