@@ -40,10 +40,10 @@ It contains several sub-pages where users can edit their preferences, wishlist, 
 ::
 ::Media-{width=narrow :landscape=false }
 #media
-<display alt="project image" src="/img/work/ps/wishlist-up.png"> </display>
-<display alt="project image" src="/img/work/ps/address-book.png" > </display>
-<display alt="project image" src="/img/work/ps/orders.png" > </display>
-<display alt="project image" src="/img/work/ps/newsletter.png" > </display>
+<display alt="project image" src="/img/work/ps/wishlist-up.png" :src-width="768" :src-height="541"> </display>
+<display alt="project image" src="/img/work/ps/address-book.png" :src-width="768" :src-height="558"> </display>
+<display alt="project image" src="/img/work/ps/orders.png" :src-width="768" :src-height="641"> </display>
+<display alt="project image" src="/img/work/ps/newsletter.png" :src-width="768" :src-height="564"> </display>
 #caption
 User profile sections screenshots
 ::

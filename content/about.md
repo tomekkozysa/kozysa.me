@@ -4,8 +4,12 @@ description: "Wrap text content to align with max width, supports multiple colum
 head: "About"
 thumbnail: /img/work/image-halfwidth.png
 ---
-::Text-{:columns=2}
-
+::Spacer
+::
+::MediaText-{:flexible=true :reverse=true}
+#media
+<display alt="project image" src="/img/me.jpg" :src-width=480 :src-height=640> </display>
+#text
 Tomasz here. Thanks for visiting! 
 
 I live and work in London. By trade, I'm a web developer. I build websites and applications using standard web technologies, and by night, I play music or... write more code. 

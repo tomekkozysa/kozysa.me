@@ -5,8 +5,8 @@
 				<h2 class="title">{{ data.title }}</h2>
 			</div>
 		</section>
-		<section>
-			<ContentRenderer :value="data" class="content w-full flex flex-col justify-start" />
+		<section class="intro w-full" :class="maxWidth">
+			<ContentRenderer :value="data" class="content w-full flex flex-col justify-start" />	
 		</section>
 	</ContentQuery>
 </template>
