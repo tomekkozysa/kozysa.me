@@ -7,9 +7,10 @@ order: 10
 online: true
 ---
 
-::Tags-{:list='["UX/Prototyping, Visual Design","JavaScript/HTML/CSS"]'}
+::Tags-{:list='["UX/Prototyping", "Visual Design","JavaScript/HTML/CSS"]'}
 ::
-
+::Spacer
+::
 ::Text
 An interactive feature that reveals a word introduced to the Oxford Dictionary the year you or a user were born. Designed and developed for Oxford University Press.
 ::

@@ -9,9 +9,11 @@ online: true
 
 ::Tags-{:list='["IA/UI/UX","JQuery/HTML/CSS", "LAMP/Codeigniter"]'}
 ::
+::Spacer
+::
 
 ::Text-{:columns=2}
-The objective of the project was to build an application that can visualise Yahoo! advertsing performance for new formats. Through a set of configurable parameters such as demographics or content type it would allow comparison of how different formats performed in user tests. The data used by the application was based on results of the research and user tests conducted by Yahoo! Research and Insights.
+Although it's an old project, it's a notable one. I had a chance to design and build a series of prototypes for new advertising formats tested by Yahoo! EMEA Research across its pan-European audience. In addition, I developed an application that allows access to and visualise the gathered data.
 ::
 ::Spacer
 ::
@@ -22,6 +24,7 @@ The objective of the project was to build an application that can visualise Yaho
 #caption
 Homepage
 ::
+
 ::Spacer
 ::
 
@@ -32,16 +35,25 @@ Homepage
 <display alt="project image" src="/img/work/ad-planner/sg3.jpg" :src-width=1024 :src-height=1432> </display>
 <display alt="project image" src="/img/work/ad-planner/sg5.jpg" :src-width=1024 :src-height=1432> </display>
 #caption
-Working application screengrabs
+Research results were displayed using an interactive spider chart, working application screengrabs
 ::
+
 ::Spacer
 ::
 
-::Media
+::Media-{caption=right}
 #media
 <display alt="project image" src="/img/work/ad-planner/tripplewf.gif" :src-width=3888 :src-height=2592> </display>
+
 #caption
-Filtering of the data. jQuery used to format &the lt;form/> element markup into a horizontal bar, here all the different categories are worked out
+The filter system was based on native _form_ elements aided with Javascript and provided a deep dive into the data and performance comparison across different ages, countries or interest groups.
 ::
+
 ::Spacer
+::
+
+::Text
+We performed around twelve waves, testing between two and seven formats in each wave. 
+
+Yahoo! Research used the application to qualify advertising formats for further product development. 
 ::

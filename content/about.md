@@ -1,13 +1,12 @@
 ---
-title: "About me page"
+title: "Hello"
 description: "Wrap text content to align with max width, supports multiple columns"
 head: "About"
 thumbnail: /img/work/image-halfwidth.png
 ---
 ::Text-{:columns=2}
 
-
-Hello, Tomasz here. Thanks for visiting! 
+Tomasz here. Thanks for visiting! 
 
 I live and work in London. By trade, I'm a web developer. I build websites and applications using standard web technologies, and by night, I play music or... write more code. 
 
@@ -19,19 +18,4 @@ The Experiments section is where I publish self-initiated projects, which I use 
  
 
 I'm always on the lookout for new opportunities and projects, get in touch if you need help with your website.
-
-Other links:
-
-
-::
-
-::Spacer-{size=sm}
-::
-::Text
-#### You can also find me on:
-::
-::Spacer
-::
-
-<!-- Content of the page -->
 

@@ -9,21 +9,23 @@ online: true
 
 ::Tags-{:list='["UX/Visual Design","Components System","Adobe CS"]'}
 ::
-
+::Spacer
+::
 ::Text-{:columns=2}
-The Independent invited my colleague and me to design a new online section based on a revised editorial approach focusing on the online debate.
+The Independent invited my team to design a new online section based on a revised editorial approach focusing on the online debate.
 
 We were required to work against a very short deadline. We had two weeks to complete the task. 
 ::
-
+::Spacer
+::
 
 ::Media-{caption=right}
 #media
 <box width=100% height=650px max-height=650px>
-    <display alt="project image" src="/img/work/iv/iv-homepage-wf.png" :src-width=800 :src-height=2703></display>
+    <display alt="project image" src="/img/work/iv/iv-homepage-wf.png" :src-width=560 :src-height=1892></display>
 </box>
 <box width=100% height=650px max-height=650px>
-    <display alt="project image" src="/img/work/iv/iv-homepage.jpg" :src-width=800 :src-height=3467></display>
+    <display alt="project image" src="/img/work/iv/iv-homepage.jpg" :src-width=560 :src-height=2427></display>
 </box>
 #caption
 Our task was to design a visual language that supports bold and dynamic communication across a full spectrum of editorial components and pages. 
@@ -33,10 +35,10 @@ Our task was to design a visual language that supports bold and dynamic communic
 
 ::Media-{caption=right :landscape=false}
 #media
-<display alt="project image" src="/img/work/iv/wfs1.jpg" :src-width=2400 :src-height=856> </display>
-<display alt="project image" src="/img/work/iv/wfs2.jpg" :src-width=2400 :src-height=856> </display>
-<display alt="project image" src="/img/work/iv/wfs3.jpg" :src-width=2400 :src-height=856> </display>
-<display alt="project image" src="/img/work/iv/wfs4.jpg" :src-width=2400 :src-height=856> </display>
+<display alt="project image" src="/img/work/iv/wfs1.jpg" :src-width=1152 :src-height=411> </display>
+<display alt="project image" src="/img/work/iv/wfs2.jpg" :src-width=1152 :src-height=411> </display>
+<display alt="project image" src="/img/work/iv/wfs3.jpg" :src-width=1152 :src-height=411> </display>
+<display alt="project image" src="/img/work/iv/wfs4.jpg" :src-width=1152 :src-height=411> </display>
 ::
 ::Text-{:columns=2}
 Just like a single article can be promoted using its elements in multiple configurations, we explored different ways of providing snippets of information. We used editorial cycles, user interactions and content types to identify the required components. 
