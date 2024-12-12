@@ -45,7 +45,7 @@ It contains several sub-pages where users can edit their preferences, wishlist, 
 <display alt="project image" src="/img/work/ps/orders.png" > </display>
 <display alt="project image" src="/img/work/ps/newsletter.png" > </display>
 #caption
-Subsections screenshots
+User profile sections screenshots
 ::
 ::Spacer
 ::
