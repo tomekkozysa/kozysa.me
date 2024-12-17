@@ -1,6 +1,6 @@
 ---
-title: "Paul Smith"
-description: "Front End Development"
+title: "paulsmith.com"
+description: "Paul Smith online shop development"
 head: "something for the head"
 thumbnail: /img/work/full_size_169.png
 order: 1
@@ -8,16 +8,7 @@ online: true
 ---
 ::Spacer-{size=sm}
 ::
-::Tags-{:list='["Vue.js","Tailwind","GraphQl"]'}
-::
-::Spacer
-::
-
-::Media-{width=wide caption=right}
-#media
-<display alt="project image" src="/img/work/ps/homepage.png" :src-width=1535 :src-height=864> </display>
-#caption
-Home page
+::Tags-{:list='["Vue.js","Tailwind","Google Maps API","GraphQl"]'}
 ::
 ::Spacer
 ::
@@ -28,6 +19,15 @@ We used Vue 3 Composition API, and Tailwind to deliver multiple components and r
 ::
 ::Spacer
 ::
+::Media-{width=wide caption=right}
+#media
+<display alt="project image" src="/img/work/ps/homepage.png" :src-width=1535 :src-height=864> </display>
+#caption
+Home page
+::
+::Spacer
+::
+
 ::Media
 #media
 <display alt="project image" src="/img/work/ps/user-profile.png" :src-width=1152 :src-height=633>

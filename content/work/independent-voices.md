@@ -1,7 +1,7 @@
 ---
 title: "Independent Voices"
-description: "The Independent"
-head: "Design system for online opinion platfrom"
+description: "The Independent, new online section design"
+head: "Design system for online debate and opinion platform"
 thumbnail: /img/work/full_size_169.png
 order: 3
 online: true

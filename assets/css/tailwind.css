@@ -26,7 +26,7 @@
 
 
 	.page{
-		@apply px-8 py-48;
+		@apply px-4 md:px-8 py-48;
 	}
 	.page.index{
 		@apply pt-8;
@@ -250,14 +250,14 @@
 		list-style: none;
 	}
 	.header{
-		@apply py-4 px-8;
+		@apply py-4 px-4 md:px-8;
 	}
 	.header-title{
 		@apply text-xl;
 	}
 	
 	.footer{
-		@apply px-8 py-4 min-h-24 text-white bg-zinc-900 min-h-64;
+		@apply px-4 md:px-8 py-4 min-h-24 text-white bg-zinc-900 min-h-64;
 	}
 
 

@@ -6,8 +6,9 @@ order: 1
 thumbnail: /img/work/full_size_169.png
 online: true
 ---
-
-::Tags-{:list='["Vue.js","Illustrator"]'}
+::Spacer-{size=sm}
+::
+::Tags-{:list='["Vue.js","SVG"]'}
 ::
 ::Spacer
 ::

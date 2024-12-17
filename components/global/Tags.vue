@@ -1,7 +1,7 @@
 <template>
 	<ul
-		class="tags flex w-full justify-self-start"
-		:class="[horizontal ? 'flex-row space-x-2' : 'flex-col', maxWidth]"
+		class="tags flex w-full justify-self-start text-zinc-600 text-sm"
+		:class="[horizontal ? 'flex-row space-x-1' : 'flex-col', maxWidth]"
 	>
 		<li v-for="tag in list" class="tag-list-item">
 			<span class="tag">{{ tag }}</span>

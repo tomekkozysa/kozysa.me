@@ -7,7 +7,7 @@
 			</h1>
 
 			<NavigationToggle v-if="is_mobile" @mousedown="toggleNav" :expanded="isNavOpen"
-				class="absolute toggle top-7 right-8" />
+				class="absolute toggle top-[1.25rem] right-4 md:right-8" />
 			<NavigationPanel v-if="is_mobile" :is_open="isNavOpen" @toggle="toggleNav" @selected="isNavOpen=false"/>
 
 			<Navigation v-else />
