@@ -22,7 +22,7 @@
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
-const is_mobile = ref(false)
+const is_mobile = ref(true)
 const isNavOpen = ref(false)
 
 const toggleNav = () => {
