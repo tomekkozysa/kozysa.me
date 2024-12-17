@@ -17,7 +17,7 @@ online: true
 #media
 <display src="/img/experiments/spinner/rs-app.png" :src-width=1698 :src-height=1615 />
 #text
-Rainbow Spinner, is a side project that explores SVG as a self contained animation format.
+Rainbow Spinner, is a side project that explores SVG as a self contained animation format that can be wrapped in a CSS variable.
 
 SMIL, animation markup for SVG allows easy access to animation parameters for customisation, while a CSS variable is an easy copy&paste way to add a spinner to your project.
 
@@ -40,4 +40,4 @@ Animations can be customised and downloaded as an SVG or a ready to use CSS.
 ::Spacer
 ::
 ::Text
-[Rainbow Spinner](https://rainbow-spinner.netlify.app) on netlify
+Visit [Rainbow Spinner](https://rainbow-spinner.netlify.app) on netlify

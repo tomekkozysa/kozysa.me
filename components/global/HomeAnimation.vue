@@ -36,6 +36,7 @@ useHead({
 });
 
 
+
 const svgNS = "http://www.w3.org/2000/svg";
 const in_drawing_mode = ref(false);
 const is_loading = ref(true)
@@ -113,7 +114,7 @@ const draw = (collection, doneCallback) => {
   var speed = 0.75;
   var grow = 3000;
 
-  var animate = function (index) {
+  const animate = function (index) {
     if (index >= collection.length) {
       doneCallback(1);
       return;
@@ -153,17 +154,22 @@ const draw = (collection, doneCallback) => {
   animate(0);
 }
 
+const drawTimeout = ref(null);
 const drop =()=> {
   in_drawing_mode.value = false;
   pencilRest();
   return;
 }
-
-
-
+onBeforeUnmount(()=>{
+  if(drawTimeout.value){
+    clearTimeout(drawTimeout.value)
+  }
+})
 onMounted(()=>{
 
-  // return;
+  if(drawTimeout.value){
+    clearTimeout(drawTimeout.value)
+  }
 
   let collection = getCollection();
   fixRects(collection);
@@ -195,11 +201,11 @@ onMounted(()=>{
   });
 
 
-  setTimeout(() => {
+  drawTimeout.value = setTimeout(() => {
     if (!in_drawing_mode.value) {
       draw(collection, drop);
     }
-  }, 2000);
+  }, 1500);
 
   is_loading.value = false
 }

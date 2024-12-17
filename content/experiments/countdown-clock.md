@@ -25,7 +25,7 @@ This unusual clock counts down until 22nd January completing the composition to 
 #media
 <iframe src="https://22g.netlify.app/" width=100% height=1000px ></iframe>
 #caption
-It was built as a part of [genuary](https://genuary.art) – a generative art daily challenge, as an interpretation of 'Shadows', the prompt of 22nd January 2023.
+It was built as a part of [genuary](https://genuary.art) – a generative art daily challenge, as an interpretation of the prompt: 'Make something that will look completely different in a year'.
 ::
 ::Spacer
 ::

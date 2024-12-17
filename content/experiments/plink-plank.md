@@ -19,7 +19,7 @@ Make music with physics! Click anywhere to drop a ball
 
 ::Media
 #media
-<iframe src="https://plink-plank.netlify.app/" width=1200px height=700px ></iframe>
+<iframe src="https://plink-plank.netlify.app/" width=100%  style="aspect-ratio:3.2/2.4" ></iframe>
 ::
 ::Spacer
 ::
