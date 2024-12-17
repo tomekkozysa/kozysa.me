@@ -6,7 +6,8 @@ thumbnail: /img/work/full_size_169.png
 order: 2
 online: true
 ---
-
+::Spacer-{size=sm}
+::
 ::Tags-{:list='["Vue.js/Nuxt","Vuetify","Google Maps API","Firebase"]'}
 ::
 ::Spacer

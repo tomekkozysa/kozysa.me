@@ -1,12 +1,13 @@
 ---
-title: "OED Birthday Words - text ok"
+title: "OED Birthday Words"
 description: "An interactive feature for Oxford University Press"
 head: "An interactive feature for Oxford University Press"
 thumbnail: /img/work/full_size_169.png
 order: 10
 online: true
 ---
-
+::Spacer-{size=sm}
+::
 ::Tags-{:list='["UX/Prototyping", "Visual Design","JavaScript/HTML/CSS"]'}
 ::
 ::Spacer

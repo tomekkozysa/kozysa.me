@@ -6,7 +6,8 @@ thumbnail: /img/work/full_size_169.png
 order: 3
 online: true
 ---
-
+::Spacer-{size=sm}
+::
 ::Tags-{:list='["UX/Visual Design","Components System","Adobe CS"]'}
 ::
 ::Spacer

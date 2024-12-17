@@ -74,9 +74,14 @@
 		@apply mt-4;
 		list-style: decimal
 	}
-	.content ul {
+	
+	.content .projects-list-nav {
 		@apply mt-4;
-		list-style: disc
+		/* list-style: disc */
+	}
+	.content .projects-list-nav-item {
+		@apply mt-8;
+
 	}
 	.content pre{
 		@apply max-w-6xl self-start px-4 py-4 text-sm bg-white w-full;

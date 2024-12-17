@@ -6,7 +6,8 @@ thumbnail: /img/work/full_size_169.png
 order: 8
 online: true
 ---
-
+::Spacer-{size=sm}
+::
 ::Tags-{:list='["IA/UI/UX","JQuery/HTML/CSS", "LAMP/Codeigniter"]'}
 ::
 ::Spacer
