@@ -1,5 +1,8 @@
 .home-hero{
+    padding-bottom: 0;
 	min-height: 80vh;
+	border-bottom:3px solid black;
+	
 }
 .home-hero .media{
     @apply mx-auto;

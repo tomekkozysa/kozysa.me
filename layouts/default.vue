@@ -2,7 +2,7 @@
 		<header ref="header" class="header flex w-full relative"
 			:class="is_mobile ? 'flex-col' : 'items-center justify-between'">
 			
-			<h1 class="relative z-20 shrink-0">
+			<h1 class="relative z-20 shrink-0 header-title">
 				<NuxtLink to="/">Tomasz Kozysa</NuxtLink>
 			</h1>
 

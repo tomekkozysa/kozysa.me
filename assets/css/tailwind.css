@@ -8,7 +8,7 @@
 	}
 	body {
 		
-		@apply bg-stone-50 text-gray-800 text-base;	
+		@apply bg-stone-100 text-zinc-800 text-base;	
 	}
 
 	h1 {
@@ -46,7 +46,8 @@
 	}
 
 	.page .content{
-		@apply mt-8 gap-y-8
+		
+		/* @apply gap-y-4 mt-4 lg:gap-y-8 lg:mt-8 */
 	}
 
 
@@ -66,7 +67,7 @@
 		@apply mt-0;
 	}
 	.content p code{
-		@apply text-sm border-2 px-1 rounded border-blue-200  text-gray-800;
+		@apply text-sm border-2 px-1 rounded border-blue-200  text-zinc-800;
 		border-width: 1px;
 	}
 	.content ol {
@@ -82,7 +83,7 @@
 	}
 
 	.navigation-toggle .bar {
-		@apply text-gray-800;
+		@apply text-zinc-800;
 		
 	}
 
@@ -130,6 +131,7 @@
 }
 
 @layer components {
+
 	/* .max-text-70{
 		max-width: 70ch;
 	} */
@@ -165,8 +167,11 @@
 	.media.stacked{
 		@apply mb-8;
 	}
+	.media .media-content{
+		@apply items-center;
+	}
 	.media .media-content.portrait{
-		@apply lg:space-y-8 lg:flex-col;
+		@apply space-y-8 flex-col;
 	}
 	.media .media-content.landscape{
 		@apply space-y-8 flex-col md:flex-row md:space-y-0 md:space-x-8;
@@ -191,12 +196,12 @@
 		@apply md:space-x-8 space-y-8 md:space-y-0 md:flex-row;
 	}
 	.mediatext .text{
-		width: fit-content;
+		/* width: fit-content; */
 		flex-shrink: 1;
-		@apply md:pl-8 mt-2 md:mt-0;
+		@apply md:pl-8 md:pr-0 mt-8 md:mt-0;
 	}
-	.mediatext .reverse{
-		@apply md:pr-8
+	.mediatext .text.reverse{
+		@apply md:pr-8 md:pl-0;
 	}
 	.mediatext .text.bottom{
 		@apply self-end;
@@ -223,7 +228,7 @@
 		@apply mt-0
 	}
 	.caption{
-		@apply mt-2 border-gray-800 text-base
+		@apply mt-2 border-zinc-800 text-base
 		
 	}
 	.caption.noborder{
@@ -242,9 +247,12 @@
 	.header{
 		@apply py-4 px-8;
 	}
+	.header-title{
+		@apply text-xl;
+	}
 	
 	.footer{
-		@apply px-8 py-4 min-h-24 text-white bg-gray-800 min-h-64;
+		@apply px-8 py-4 min-h-24 text-white bg-zinc-900 min-h-64;
 	}
 
 
@@ -254,14 +262,14 @@
 
 @layer utilities{
 
-	.spacer {
-		@apply block min-h-16 bg-transparent w-full;
+	.spacer{
+		@apply block min-h-16 bg-transparent w-full
 	}
 	.spacer.md {
 		@apply min-h-8;
 	}
 	.spacer.sm {
-		@apply min-h-16;
+		@apply min-h-4;
 	}
 
 	.scroll-info-content{

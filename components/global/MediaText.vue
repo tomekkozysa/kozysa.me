@@ -1,6 +1,6 @@
 <template>
-	<div class="mediatext" :class="[
-		reverse ? 'reverse justify-start' : '',
+	<div class="mediatext justify-between" :class="[
+		reverse ? 'reverse ' : '',
 		flexible ? 'flexible' : 'split',
 		maxWidth,
 	]">

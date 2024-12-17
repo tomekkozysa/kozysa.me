@@ -4,7 +4,7 @@
 			<HomeAnimation class="mx-auto" />
 		</template>
 		<template #text>
-			<h2>I design, prototype and build user interfaces for desktop & mobile applications and responsive websites.</h2>
+			<h2>I design, prototype and build user interfaces for desktop & mobile web applications and responsive websites.</h2>
 		</template>
 	</MediaText>
 </template>
