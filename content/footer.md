@@ -4,7 +4,7 @@
      
 ::
 ::GridItem-{area=c justify=end align=end}
-© Copyright Tomasz Kozysa
+With love from London,  ❤️ <br /> December 2024
 ::
 <!-- Content of the page -->
 
