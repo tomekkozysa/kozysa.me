@@ -41,6 +41,8 @@ Our task was to design a visual language that supports bold and dynamic communic
 <display alt="project image" src="/img/work/iv/wfs3.jpg" :src-width=1152 :src-height=411> </display>
 <display alt="project image" src="/img/work/iv/wfs4.jpg" :src-width=1152 :src-height=411> </display>
 ::
+::Spacer-{size=sm}
+::
 ::Text-{:columns=2}
 Just like a single article can be promoted using its elements in multiple configurations, we explored different ways of providing snippets of information. We used editorial cycles, user interactions and content types to identify the required components. 
 

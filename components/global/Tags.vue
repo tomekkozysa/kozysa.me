@@ -1,6 +1,6 @@
 <template>
 	<ul
-		class="tags flex w-full justify-self-start text-zinc-600 text-sm"
+		class="tags flex w-full justify-self-start text-zinc-600 text-sm lg:text-base"
 		:class="[horizontal ? 'flex-row space-x-1' : 'flex-col', maxWidth]"
 	>
 		<li v-for="tag in list" class="tag-list-item">

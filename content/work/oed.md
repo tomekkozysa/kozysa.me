@@ -15,6 +15,8 @@ online: true
 ::Text
 An interactive feature that reveals a word introduced to the Oxford Dictionary the year you or a user were born. Designed and developed for Oxford University Press.
 ::
+::Spacer
+::
 ::Media-{caption=right}
 #media
 <oed-demo /> 
