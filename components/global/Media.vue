@@ -2,7 +2,7 @@
     <figure class="media flex flex-col" :class="[stacked ? 'stacked' : '', maxWidth]">
         <div class="flex media-content"
             :class="[landscape ? 'landscape' : 'portrait']">
-            <slot name="media" />
+            <ContentSlot :use="$slots.media" unwrap="p" />
         </div>
         <Caption v-if="!stacked" :align="caption">
             <slot name="caption" />

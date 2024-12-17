@@ -1,5 +1,5 @@
 <template>
-	<div class="display w-full" :class="[is_loading ? 'is_loading' : '']">
+	<div class="display" :class="[is_loading ? 'is_loading' : '']">
 		<nuxt-img ref="image" 
 			:src="imageSource" 
 			:alt="alt" 

@@ -6,7 +6,7 @@ thumbnail: /img/work/image-halfwidth.png
 ---
 ::Spacer
 ::
-::MediaText-{:flexible=true :reverse=true}
+::MediaText-{:flexible=true :reverse=true textAlign=top}
 #media
 <display alt="project image" src="/img/me.jpg" :src-width=480 :src-height=640> </display>
 #text
@@ -16,10 +16,9 @@ I live and work in London. By trade, I'm a web developer. I build websites and a
 
 This is the fifth iteration of my portfolio, and this version includes more independent projects and explorations from the past years. 
 
-The Work section focuses on commercial projects and showcases the important milestones in my development or, in the case of the older projects,  a development of the processes still applicable Today. 
+The [Work](/work) section focuses on commercial projects and showcases the important milestones in my development or, in the case of the older projects,  a development of the processes still applicable Today. 
 
-The Experiments section is where I publish self-initiated projects, which I use to explore applications of web technologies. I like building apps with Vue.js but often use just vanilla stack to craft the exact tool for a specific job.
+The [Experiments](/experiments) section is where I publish self-initiated projects, which I use to explore applications of web technologies. I like building apps with Vue.js but often use just vanilla stack to craft the exact tool for a specific job.
  
-
-I'm always on the lookout for new opportunities and projects, get in touch if you need help with your website.
+I'm always on the lookout for new opportunities and projects, [get in touch](mailto:hello@kozysa.me) if you need help with your website or need an extraordinary tool.
 

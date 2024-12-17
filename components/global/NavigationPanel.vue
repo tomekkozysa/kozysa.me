@@ -2,14 +2,14 @@
     <nav class="navigation flex w-full  align-center" :class="[is_open ? 'is_open ' : 'is_closed']">
         <ul class="flex flex-col items-center justify-center w-full text-3xl text-left navigation-list gap-y-4">
             <li>
-                <NuxtLink to="/components" class="navigation-link">Components</NuxtLink>
-            </li>
-            <li>
-                <NuxtLink to="/layouts" class="navigation-link">Layouts</NuxtLink>
-            </li>
-            <li>
-                <NuxtLink to="/about" class="navigation-link">About</NuxtLink>
-            </li>
+				<NuxtLink to="/experiments" class="navigation-link">Experiments</NuxtLink>
+			</li>
+			<li>
+				<NuxtLink to="/work" class="navigation-link">Work</NuxtLink>
+			</li>
+			<li>
+				<NuxtLink to="/about" class="navigation-link">About</NuxtLink>
+			</li>
         </ul>
     </nav>
 </template>

@@ -1,6 +1,6 @@
 <script setup>
 
-const projects = await queryContent("/work").find();
+const projects = await queryContent("/experiments").find();
 const projectsByOrder = projects.sort((a, b) => {
 	if (a.order == null) a.order = 100;
 	const sorted = a.order > b.order ? 1 : -1
@@ -14,7 +14,7 @@ const maxWidth = computedMaxWidth("default");
 <template>
 	<div class="content w-full" :class="[maxWidth]">
 		<div class="intro w-full" :class="[maxWidth]">
-			<ContentDoc :path="`/work/`" v-slot="{ doc }" class="w-full"/>
+			<ContentDoc :path="`/experiments/`" v-slot="{ doc }" class="w-full"/>
 		</div>
 		<div v-for="(project, index) in filtered">
 			<!-- <card :title="project.title" :image="project.thumbnail"

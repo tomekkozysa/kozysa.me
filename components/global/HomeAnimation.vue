@@ -174,7 +174,7 @@ onMounted(()=>{
   setTimeout(() => {
     document.querySelector("svg").classList.remove("is_loading");
     pencilRollIn();
-  }, 300);
+  }, 100);
 
   document.querySelector("svg").addEventListener("click", (e) => {
     if (!in_drawing_mode.value) {
@@ -199,7 +199,7 @@ onMounted(()=>{
     if (!in_drawing_mode.value) {
       draw(collection, drop);
     }
-  }, 3000);
+  }, 2000);
 
   is_loading.value = false
 }
@@ -213,7 +213,7 @@ onMounted(()=>{
 </script>
 <style>
 .is_loading{
-    opacity:.5
+    opacity:0;
 }
 .anim {
     overflow: visible;

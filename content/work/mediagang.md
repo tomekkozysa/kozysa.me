@@ -29,7 +29,7 @@ It was crucial that the application was responsive and worked across various mob
 #media
 <display alt="project image" src="/img/work/mediagang/city-view-desktop.png" :src-width=576 :src-height=326>>
 #text
-Each route consisted of seven deliveries, all seven needed to be completed before the route was fully delivered, closing the green progress circle.
+Each route consisted of seven locations, each delivery tracked in realtime. Once all locations were delivered, a route would be considered completed.
 ::
 ::Spacer
 ::
@@ -61,7 +61,8 @@ Google Firebase API provided real-time synchronisation and user authentication.
     :src-width=350 :src-height=1370> </display>
 </box>
 ::
+::Spacer
+::
 ::Text
-
 Since the first campaign, the application has been fully adopted and become a crucial tool in Media Gang planning and production of their Guilerra marketing campaigns.
 ::
