@@ -1,5 +1,8 @@
 <script setup>
 
+useHead({
+	titleTemplate: `Web experiments | Tomasz Kozysa`,
+})
 const projects = await queryContent("/experiments").find();
 const projectsByOrder = projects.sort((a, b) => {
 	if (a.order == null) a.order = 100;

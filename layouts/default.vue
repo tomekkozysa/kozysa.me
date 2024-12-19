@@ -25,6 +25,7 @@ const breakpoints = useBreakpoints(breakpointsTailwind)
 const is_mobile = ref(true)
 const isNavOpen = ref(false)
 
+const route = useRoute()
 const toggleNav = () => {
 	isNavOpen.value = !isNavOpen.value
 };
@@ -39,5 +40,4 @@ onMounted(() => {
 		false
 	)
 })
-
 </script>

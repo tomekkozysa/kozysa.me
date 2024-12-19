@@ -1,4 +1,5 @@
 <template>
+  <div :class="{is_loading}" class="wrapper">
     <svg class="anim" :class="{is_loading}" width="300px" height="450px" viewBox="0 0 300 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">      
         <g id="drawthis" :class="{is_loading}">
             <rect class="strk"  x="8.00346021" y="7" width="286" height="71"></rect>
@@ -28,10 +29,15 @@
             </g>
         </g>
     </svg>
-    
+  </div>
 </template>
 <script setup>
 useHead({
+  link: [{
+        rel: 'preload',
+        as: 'script',
+        href: 'js/anime.js'
+      }],
   script: [{ src: "js/anime.js" }],
 });
 
@@ -110,6 +116,9 @@ const pencilRollIn = () => {
 
 
 const draw = (collection, doneCallback) => {
+  if(!anime){
+    setTimeout(draw,300);
+  }
   in_drawing_mode.value = true;
   var speed = 0.75;
   var grow = 3000;
@@ -154,6 +163,7 @@ const draw = (collection, doneCallback) => {
   animate(0);
 }
 
+const route = useRoute();
 const drawTimeout = ref(null);
 const drop =()=> {
   in_drawing_mode.value = false;
@@ -165,8 +175,12 @@ onBeforeUnmount(()=>{
     clearTimeout(drawTimeout.value)
   }
 })
+watch(() => route.name, () => {
+      console.debug(`MyCoolComponent - watch route.name changed to ${route.name}`);
+});
 onMounted(()=>{
-
+  console.log('anim mounted')
+  console.log(route)
   if(drawTimeout.value){
     clearTimeout(drawTimeout.value)
   }
@@ -218,7 +232,13 @@ onMounted(()=>{
 
 </script>
 <style>
-.is_loading{
+
+.wrapper.is_loading{
+  background: var(--svgicon) no-repeat center;
+    --svgicon: url('data:image/svg+xml;utf-8,<svg width="200px" height="200px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><g><line x1="100.00" y1="88.00" x2="100.00" y2="91.00" stroke-width="2.50" stroke="violet" stroke-linecap="round"><animate dur="5000ms" repeatCount="indefinite" attributeName="stroke" values="violet;indigo;blue;lightgreen;yellow;darkorange;red" begin="0ms"></animate></line><line x1="107.05" y1="90.29" x2="105.29" y2="92.72" stroke-width="2.50" stroke="indigo" stroke-linecap="round"><animate dur="5000ms" repeatCount="indefinite" attributeName="stroke" values="violet;indigo;blue;lightgreen;yellow;darkorange;red" begin="500ms"></animate></line><line x1="111.41" y1="96.29" x2="108.56" y2="97.22" stroke-width="2.50" stroke="blue" stroke-linecap="round"><animate dur="5000ms" repeatCount="indefinite" attributeName="stroke" values="violet;indigo;blue;lightgreen;yellow;darkorange;red" begin="1000ms"></animate></line><line x1="111.41" y1="103.71" x2="108.56" y2="102.78" stroke-width="2.50" stroke="lightgreen" stroke-linecap="round"><animate dur="5000ms" repeatCount="indefinite" attributeName="stroke" values="violet;indigo;blue;lightgreen;yellow;darkorange;red" begin="1500ms"></animate></line><line x1="107.05" y1="109.71" x2="105.29" y2="107.28" stroke-width="2.50" stroke="yellow" stroke-linecap="round"><animate dur="5000ms" repeatCount="indefinite" attributeName="stroke" values="violet;indigo;blue;lightgreen;yellow;darkorange;red" begin="2000ms"></animate></line><line x1="100.00" y1="112.00" x2="100.00" y2="109.00" stroke-width="2.50" stroke="darkorange" stroke-linecap="round"><animate dur="5000ms" repeatCount="indefinite" attributeName="stroke" values="violet;indigo;blue;lightgreen;yellow;darkorange;red" begin="2500ms"></animate></line><line x1="92.95" y1="109.71" x2="94.71" y2="107.28" stroke-width="2.50" stroke="red" stroke-linecap="round"><animate dur="5000ms" repeatCount="indefinite" attributeName="stroke" values="violet;indigo;blue;lightgreen;yellow;darkorange;red" begin="3000ms"></animate></line><line x1="88.59" y1="103.71" x2="91.44" y2="102.78" stroke-width="2.50" stroke="violet" stroke-linecap="round"><animate dur="5000ms" repeatCount="indefinite" attributeName="stroke" values="violet;indigo;blue;lightgreen;yellow;darkorange;red" begin="3500ms"></animate></line><line x1="88.59" y1="96.29" x2="91.44" y2="97.22" stroke-width="2.50" stroke="indigo" stroke-linecap="round"><animate dur="5000ms" repeatCount="indefinite" attributeName="stroke" values="violet;indigo;blue;lightgreen;yellow;darkorange;red" begin="4000ms"></animate></line><line x1="92.95" y1="90.29" x2="94.71" y2="92.72" stroke-width="2.50" stroke="blue" stroke-linecap="round"><animate dur="5000ms" repeatCount="indefinite" attributeName="stroke" values="violet;indigo;blue;lightgreen;yellow;darkorange;red" begin="4500ms"></animate></line></g></svg>');
+  
+}
+.anim.is_loading{
     opacity:0;
 }
 .anim {

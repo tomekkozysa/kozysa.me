@@ -12,3 +12,8 @@
 .home-hero{
 	min-height: 80vh;
 }</style>
+<script setup>
+useHead({
+	titleTemplate: "Tomasz Kozysa | UX & UI | Responsive Web Design | Design & Development",
+});
+</script>

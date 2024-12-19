@@ -1,6 +1,6 @@
 ---
-title: "paulsmith.com"
-description: "Paul Smith online shop development"
+title: "Paul Smith"
+description: "paulsmith.com online shop development"
 head: "something for the head"
 thumbnail: /img/work/full_size_169.png
 order: 1

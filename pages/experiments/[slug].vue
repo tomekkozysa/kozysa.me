@@ -5,7 +5,7 @@ const { data } = await useAsyncData("experiments", () =>
 );
 
 useHead({
-	titleTemplate: "%s | Tomasz Kozysa",
+	titleTemplate: "%s | Web experiments | Tomasz Kozysa",
 });
 
 const maxWidth = computedMaxWidth("default");

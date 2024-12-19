@@ -29,13 +29,12 @@ export default defineNuxtConfig({
 		head: {
 			charset: "utf-16",
 			viewport: "width=500, initial-scale=1",
-			title: "Tomasz Kozysa",
+			title: "Tomasz Kozysa | UX & UI | Responsive Web Design | Design & Development",
 			meta: [
-				// <meta name="description" content="My amazing site">
 				{
 					name: "description",
 					content:
-						"Selection of design and development works by Tomasz",
+						"London based, freelance digital product designer/developer, expert in making complex things simple.",
 				},
 				{
 					name: "viewport",
@@ -43,6 +42,9 @@ export default defineNuxtConfig({
 						"user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=.2, width=device-width",
 				},
 			],
+			link: [
+				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }
+			  ]
 		},
 	},
 

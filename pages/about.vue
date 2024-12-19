@@ -12,4 +12,7 @@
 </template>
 <script setup>
 const maxWidth = computedMaxWidth('default');
+useHead({
+	titleTemplate: "About me | Tomasz Kozysa",
+});
 </script>
