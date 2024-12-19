@@ -1,5 +1,5 @@
 <template>
-	<svg class="navigation-toggle":class="expanded ? 'expanded' : ''" width="24" height="24" viewBox="0 0 24 24" fill="none"
+	<svg class="navigation-toggle":class="[expanded ? 'expanded' : '']" width="24" height="24" viewBox="0 0 24 24" fill="none"
 		xmlns="http://www.w3.org/2000/svg">
 		<line class="bar bar-top" x1="0" y1="12" y2="12" x2="24" stroke-width="2" stroke="white" />
 		<line class="bar bar-bottom" stroke-width="2" stroke="white" x1="0" y1="12" y2="12" x2="24" />
@@ -9,8 +9,8 @@
 const props = defineProps(["expanded"]);
 </script>
 <style scoped>
+
 .toggle {
-	display: block;
 	z-index: 50;
 	--yspread1: -3px;
 	--yspread2: 3px;

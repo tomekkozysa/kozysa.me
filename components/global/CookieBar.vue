@@ -1,5 +1,5 @@
 <template>
-    <div  v-if="!hasAccepted" 
+    <div  v-show="!hasAccepted" 
         :class="[isHidden ?  'is_hidden' : '' ]"
         class="cookie-bar py-4 px-8 flex flex-wrap items-center gap-4">
         I use Google Analytics to know how my website is performing, hope that's ok

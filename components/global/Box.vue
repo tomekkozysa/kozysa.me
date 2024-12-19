@@ -5,7 +5,7 @@
                 <slot></slot>
             </div>
         </div>
-        <div v-if="shouldScroll" class="scroll-info w-full absolute bottom-0" :class="[showScrollTag ? 'show' : '']">
+        <div v-show="shouldScroll" class="scroll-info w-full absolute bottom-0" :class="[showScrollTag ? 'show' : '']">
             <span class="scroll-info-content">
                 ↓
             </span>

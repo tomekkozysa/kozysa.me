@@ -5,12 +5,12 @@
 			<h1 class="relative z-20 shrink-0 header-title">
 				<NuxtLink to="/">Tomasz Kozysa</NuxtLink>
 			</h1>
+			<NavigationToggle @mousedown="toggleNav" :expanded="isNavOpen"
+				class="block md:hidden absolute toggle top-[1.25rem] right-4 md:right-8" />
 
-			<NavigationToggle v-if="is_mobile" @mousedown="toggleNav" :expanded="isNavOpen"
-				class="absolute toggle top-[1.25rem] right-4 md:right-8" />
-			<NavigationPanel v-if="is_mobile" :is_open="isNavOpen" @toggle="toggleNav" @selected="isNavOpen=false"/>
+			<NavigationPanel class="flex md:hidden" :is_open="isNavOpen" @toggle="toggleNav" @selected="isNavOpen=false"/>
 
-			<Navigation v-else />
+			<Navigation class="hidden md:block" />
 		</header>
 		<main class="page mx-auto min-h-90vh flex flex-col items-center" :class="$route.name">
 			<NuxtPage />
@@ -22,10 +22,10 @@
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
-const is_mobile = ref(true)
+const mobile_value  = breakpoints.smallerOrEqual('md').value
+const is_mobile = ref(mobile_value)
 const isNavOpen = ref(false)
 
-const route = useRoute()
 const toggleNav = () => {
 	isNavOpen.value = !isNavOpen.value
 };
@@ -41,3 +41,11 @@ onMounted(() => {
 	)
 })
 </script>
+<style>
+.show{
+	display:block;
+}
+.hide{
+	display:none;
+}
+</style>
