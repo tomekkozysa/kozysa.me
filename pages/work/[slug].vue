@@ -1,6 +1,6 @@
 <script setup>
 const route = useRoute();
-const { data } = await useAsyncData(`work`, () =>
+const { data } = await useAsyncData(`work-${route.params.slug}`, () =>
 	queryContent("/work", route.params.slug).findOne()
 );
 
@@ -13,8 +13,8 @@ const maxWidth = computedMaxWidth("default");
 <template>
 	<section class="intro flex flex-col items-center w-full">
 		<div class="w-full" :class="maxWidth">
-			<h2 class="title" :key="data.title">{{ data.title }}</h2>
-			<p class="description" :key="data.description">{{ data.description }}</p>
+			<h2 class="title" :key="route.params.slug">{{ data.title }}</h2>
+			<p class="description" :key="route.params.slug">{{ data.description }}</p>
 		</div>
 	</section>
 	<section class="w-full">
