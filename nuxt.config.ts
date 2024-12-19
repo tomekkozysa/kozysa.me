@@ -44,7 +44,9 @@ export default defineNuxtConfig({
 			],
 			link: [
 				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }
-			  ]
+			],
+			script: [{ src: "/js/anime.js" }]
+			  
 		},
 	},
 

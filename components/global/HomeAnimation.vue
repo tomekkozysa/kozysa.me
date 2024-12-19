@@ -32,16 +32,6 @@
   </div>
 </template>
 <script setup>
-useHead({
-  link: [{
-        rel: 'preload',
-        as: 'script',
-        href: 'js/anime.js'
-      }],
-  script: [{ src: "js/anime.js" }],
-});
-
-
 
 const svgNS = "http://www.w3.org/2000/svg";
 const in_drawing_mode = ref(false);
