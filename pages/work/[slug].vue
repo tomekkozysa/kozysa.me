@@ -1,6 +1,6 @@
 <script setup>
 const route = useRoute();
-const { data } = await useAsyncData(`work-${route.params.slug}`, () =>
+const { data } = await useAsyncData(`work`, () =>
 	queryContent("/work", route.params.slug).findOne()
 );
 
