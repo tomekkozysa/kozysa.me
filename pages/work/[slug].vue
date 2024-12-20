@@ -1,8 +1,9 @@
 <script setup>
 const route = useRoute();
-const { data } = await useAsyncData(`work-${route.params.slug}`, () =>
-	queryContent("/work", route.params.slug).findOne()
-);
+// const { data } = await useAsyncData(`work-${route.params.slug}`, () =>
+// 	queryContent("/work", route.params.slug).findOne()
+// );
+const data = await queryContent("/work", route.params.slug).findOne()
 
 useHead({
 	titleTemplate: "%s | Selected Projects | Tomasz Kozysa",
