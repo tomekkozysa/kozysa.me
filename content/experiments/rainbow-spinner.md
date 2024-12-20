@@ -15,7 +15,7 @@ online: true
 
 ::Media-Text-{:columns=2 :reverse=true}
 #media
-<display src="/img/experiments/spinner/rs-app.png" :src-width=1698 :src-height=1615 />
+<display src="/img/experiments/spinner/rs-app.png" :src-width=1698 :src-height=1615 preset="half"/>
 #text
 Rainbow Spinner, is a side project that explores SVG as a self contained animation format that can be wrapped in a CSS variable.
 

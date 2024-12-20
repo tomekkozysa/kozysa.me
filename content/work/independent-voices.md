@@ -23,10 +23,10 @@ We were required to work against a very short deadline. We had two weeks to comp
 ::Media-{caption=right}
 #media
 <box width=100% height=650px max-height=650px>
-    <display alt="project image" src="/img/work/iv/iv-homepage-wf.png" :src-width=560 :src-height=1892></display>
+    <display alt="project image" src="/img/work/iv/iv-homepage-wf.png" :src-width=560 :src-height=1892 preset=half></display>
 </box>
 <box width=100% height=650px max-height=650px>
-    <display alt="project image" src="/img/work/iv/iv-homepage.jpg" :src-width=560 :src-height=2427></display>
+    <display alt="project image" src="/img/work/iv/iv-homepage.jpg" :src-width=560 :src-height=2427 preset=half> </display>
 </box>
 #caption
 Our task was to design a visual language that supports bold and dynamic communication across a full spectrum of editorial components and pages. 
@@ -57,8 +57,8 @@ Establishing a library of components was crucial to our layout explorations. It 
 ::
 ::Media
 #media
-<display alt="project image" src="/img/work/iv/ivy-modules_01.jpg"> </display>
-<display alt="project image" src="/img/work/iv/ivy-modules_04.jpg"> </display>
+<display alt="project image" src="/img/work/iv/ivy-modules_01.jpg" preset=half> </display>
+<display alt="project image" src="/img/work/iv/ivy-modules_04.jpg" preset=half> </display>
 #caption
 Adding a well-defined colour pallet and typography was the final step in this project. 
 ::

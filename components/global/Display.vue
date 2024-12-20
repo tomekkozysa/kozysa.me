@@ -4,9 +4,12 @@
 			:src="imageSource" 
 			:alt="alt" 
 			:placeholder="placeholder" 
-			lazy :width="srcWidth"
+			lazy 
+			:width="srcWidth"
 			placeholder-class="placeholder"
-			:quality="90" :height="srcHeight" sizes="sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw 2xl:100vw" format="webp"
+			:height="srcHeight" 
+			:preset="preset"
+			
 			@load="onImageLoaded" />
 	</div>
 </template>
@@ -16,6 +19,11 @@ const props = defineProps({
 		type: String,
 		required: true,
 		default: () => '/img/placeholder.png'
+	},
+	preset:{
+		type: String,
+		required: false,
+		default:'default'
 	},
 	alt: {
 		type: String,

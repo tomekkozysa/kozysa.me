@@ -1,7 +1,7 @@
 <template>
 	<div class="display-wrapper">
 		<div class="display">
-			<nuxt-img :src="imageSource" :alt="alt" lazy preset="work" ref="image" class="display-image"/>
+			<nuxt-img :src="imageSource" :alt="alt" lazy preset="mobile" ref="image" class="display-image"/>
 		</div>
 	</div>
 </template>

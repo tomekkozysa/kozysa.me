@@ -76,11 +76,55 @@ export default defineNuxtConfig({
 			"2xl": 1800,
 		},
 		presets: {
-			work: {
+			full: {
 				modifiers: {
-					format: "jpg",
+					format: "webp",
+					width: 1800,
+					quality:70,
+					sizes:"sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw 2xl:100vw"
 				},
 			},
+			wide: { // 8xl 1440
+				modifiers: {
+					format: "webp",
+					width: 1440,
+					quality:70,
+					sizes:"sm:100vw md:100vw lg:100vw xl:100vw xxl:1440px"
+				},
+			},
+			default: { // 6xl 1152
+				modifiers: {
+					format: "webp",
+					width: 1152,
+					quality:70,
+					sizes:"sm:100vw md:100vw lg:100vw xl:1152px"
+				},
+			},
+			half: {
+				modifiers: {
+					format: "webp",
+					width: 600,
+					quality:70,
+					sizes:"sm:100vw md:100vw lg:50vw"
+				},
+			},
+			mobile: {
+				modifiers: {
+					format: "webp",
+					width: 400,
+					quality:70,
+					sizes:"sm:100vw md:400px"
+				},
+			},
+			square4: {
+				modifiers: {
+					format: "webp",
+					width: 400,
+					quality:70,
+					sizes:"sm:400px"
+				},
+			},
+
 		},
 	},
 
@@ -103,7 +147,7 @@ export default defineNuxtConfig({
 			theme: {
 				extend: {
 					maxWidth: {
-						"8xl": "96rem",
+						"8xl": "96rem", //1440 
 						"ch": "50ch",
 					},
 					minHeight: {

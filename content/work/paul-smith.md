@@ -32,6 +32,8 @@ Home page
 #media
 <display alt="project image" src="/img/work/ps/user-profile.png" :src-width=1152 :src-height=633>
 ::
+::Spacer
+::
 ::Text-{}
 The User Profile section was my other area of focus. 
 It contains several sub-pages where users can edit their preferences, wishlist, address book or access their order history with order details. 
@@ -53,8 +55,8 @@ User profile sections screenshots
 
 ::MediaText-{text=bottom reverse width=wide :landscape=true} 
 #media
-<display alt="project image" src="/img/work/ps/whishlist.png" :src-width=576 :src-height=324> </display>
-<display alt="project image" src="/img/work/ps/bag.png" :src-width=576 :src-height=324> </display>
+<display alt="project image" src="/img/work/ps/whishlist.png" :src-width=576 :src-height=324 preset="half"> </display>
+<display alt="project image" src="/img/work/ps/bag.png" :src-width=576 :src-height=324 preset="half"> </display>
 #text
 I contributed several "top-bar" components such as the User Login, through Forgotten Password, to Bag, Wishlist and Store & Currency Selector.  
 ::

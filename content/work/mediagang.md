@@ -20,7 +20,7 @@ Used by drivers and managers, the application gave real-time insight into produc
 It was crucial that the application was responsive and worked across various mobile devices.
 
 #media
-<display alt="project image" src="/img/work/mediagang/map-portrait.png" :src-width=675 :src-height=722>
+<display alt="project image" src="/img/work/mediagang/map-portrait.png" :src-width=675 :src-height=722 preset="half">
 ::
 
 ::Spacer
@@ -28,7 +28,7 @@ It was crucial that the application was responsive and worked across various mob
 
 ::MediaText-{reverse}
 #media
-<display alt="project image" src="/img/work/mediagang/city-view-desktop.png" :src-width=576 :src-height=326>>
+<display alt="project image" src="/img/work/mediagang/city-view-desktop.png" :src-width=576 :src-height=326 preset="half">
 #text
 Each route consisted of seven locations, each delivery tracked in realtime. Once all locations were delivered, a route would be considered completed.
 ::
@@ -37,7 +37,7 @@ Each route consisted of seven locations, each delivery tracked in realtime. Once
 
 ::MediaText-{text=bottom}
 #media
-<display alt="project image" src="/img/work/mediagang/campaign-view-desktop.png" :src-width=576 :src-height=722>
+<display alt="project image" src="/img/work/mediagang/campaign-view-desktop.png" :src-width=576 :src-height=722 preset="half">
 #text
 I used the Vuetify UI library for the components and the visual language. It helped streamline the build and provided a consistent user experience.
 Google Firebase API provided real-time synchronisation and user authentication. 
@@ -51,15 +51,15 @@ Google Firebase API provided real-time synchronisation and user authentication.
 #media
 <box width=100% max-width=400px height=650px max-height=650px>
     <display src="/img/work/mediagang/campaign-view-mobile.png" 
-    :src-width=341 :src-height=1989> </display>
+    :src-width=341 :src-height=1989 preset="mobile"> </display>
 </box>
 <box width=100% max-width=400px height=650px max-height=650px>
     <display src="/img/work/mediagang/city-view-mobile.png" 
-    :src-width=350 :src-height=929> </display>
+    :src-width=350 :src-height=929 preset="mobile"> </display>
 </box>
 <box width=100% max-width=400px height=650px max-height=650px>
     <display src="/img/work/mediagang/location-view-mobile.png" 
-    :src-width=350 :src-height=1370> </display>
+    :src-width=350 :src-height=1370 preset="mobile"> </display>
 </box>
 ::
 ::Spacer
