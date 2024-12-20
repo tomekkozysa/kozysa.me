@@ -1,6 +1,5 @@
 <template>
-		<header ref="header" class="header flex w-full relative"
-			:class="is_mobile ? 'flex-col' : 'items-center justify-between'">
+		<header ref="header" class="header flex w-full relative flex-col md:flex-row md:items-center md:justify-between">
 			
 			<h1 class="relative z-20 shrink-0 header-title">
 				<NuxtLink to="/">Tomasz Kozysa</NuxtLink>
