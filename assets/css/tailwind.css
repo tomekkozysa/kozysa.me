@@ -203,7 +203,7 @@
 	.mediatext .text{
 		/* width: fit-content; */
 		flex-shrink: 1;
-		@apply md:pl-8 md:pr-0 mt-8 md:mt-0;
+		@apply md:pl-8 md:pr-0 pt-8 lg:pt-0;
 	}
 	.mediatext .text.reverse{
 		@apply md:pr-8 md:pl-0;
